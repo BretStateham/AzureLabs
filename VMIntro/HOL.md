@@ -69,7 +69,7 @@ The highlighted portion of the following diagram shows what you will configure i
 
 	![1030NewVMFromGallery](images/1030newvmfromgallery.png?raw=true "New VM From Gallery")
 
-1. In the "CREATE A VIRTUAL MACHINE WIZARD", on the "Coose an Image" page, scroll down to find and select the "SQL Server 2012 SP1 Enterprise on Windows Server 2008 R2" image and click the next (arrow) button.
+1. In the **"CREATE A VIRTUAL MACHINE WIZARD"**, on the **"Coose an Image"** page, scroll down to find and select the **"SQL Server 2012 SP1 Enterprise on Windows Server 2008 R2"** image and click the next (arrow) button.
 
 	![1040SQLImage](images/1040sqlimage.png?raw=true "SQL Server 2012 SP1 Enterprise on Windows Server 2008 R2")
 
@@ -115,7 +115,7 @@ In this task, you will create BOTH of the Web Server Virtual Machines, **iisvm1*
 
 	![1090NewVMFromGallery](images/1090newvmfromgallery.png?raw=true "New VM From Gallery")
 
-1. In the **"CREATE A VIRTUAL MACHINE"** wizard, on the **"Choose an Image"** page, select the "Windows Server 2008 R2 SP1" image and click the next (arrow) button to continue:
+1. In the **"CREATE A VIRTUAL MACHINE"** wizard, on the **"Choose an Image"** page, select the **"Windows Server 2008 R2 SP1"** image and click the next (arrow) button to continue:
 
 	![1100Win2K8VMImage](images/1100win2k8vmimage.png?raw=true "Windows Server 2008 R2 SP1 Image")
 
@@ -173,23 +173,23 @@ The highlighted portion of the following diagram shows what you will configure i
 
 	![2016VHDSize](images/2016vhdsize.png?raw=true "VHD Size")
 
-1. Once the first drive is successfully attached, repeat the process to attach a second drive.  These two drives will be used to store the SQL Server database files, logs and backups.  Once you are done, there should be a total of three drives on the sqlvm1 virtual machine.
+1. Once the first drive is successfully attached, **repeat the process to attach a second drive**.  These two drives will be used to store the SQL Server database files, logs and backups.  Once you are done, there should be a total of three drives on the sqlvm1 virtual machine.
 
 	![2018SQLVM1Drives](images/2018sqlvm1drives.png?raw=true "SQLVM1 Drives")
 
-1. While still on the sqlvm1 dashboard page, click the "CONNECT" button along the bottom.
+1. While still on the sqlvm1 dashboard page, click the **"CONNECT"** button along the bottom.
 	
 	![2020ConnectToSQLVM1](images/2020connecttosqlvm1.png?raw=true "Connect to SQLVM1")
 
-1. You will see an informational message from the portal instructing you to open the .rdp file when prompted. Click OK to clear the message:
+1. You will see an informational message from the portal instructing you to open the .rdp file when prompted. Click **OK** to clear the message:
 
 	![2030RDPInfoMsg](images/2030rdpinfomsg.png?raw=true "RDP File Informational Message")
 
-1. Then, when prompted, open the RDP file:
+1. Then, when prompted, **open the RDP file**:
 
 	![2040OpenRDPFile](images/2040openrdpfile.png?raw=true "Open the RDP File")
 
-1. You may see a prompt about the publisher not being able to be verified, if you do click "Connect":
+1. You may see a prompt about the publisher not being able to be verified, if you do click **"Connect"**:
 
 	![2050RDPPublisherVerification](images/2050rdppublisherverification.png?raw=true "RDP Publisher Verification")
 
@@ -197,11 +197,11 @@ The highlighted portion of the following diagram shows what you will configure i
 
 	![2060Credentials](images/2060credentials.png?raw=true "Credentials")
 
-1. You should see a final prompt to verify the identity of the remote computer.  You can turn on the "Don't ask me again..." checkbox to prevent this dialog appearing in the future for this VM.  Click "Yes" to connect:
+1. You should see a final prompt to verify the identity of the remote computer.  You can turn on the "Don't ask me again..." checkbox to prevent this dialog appearing in the future for this VM.  Click **"Yes"** to connect:
 
 	![2070RDPIdentity](images/2070rdpidentity.png?raw=true "RDP Identity Confirmation")
 
-1. Once you are connected to sqlvm1 via remote desktop, you can close the "Initial Configuration" window if it is open.  Then, launch "Server Manager" (if it isn't open already) by clicking on the shortcut on the toolbar:
+1. Once you are connected to sqlvm1 via remote desktop, you can close the **"Initial Configuration"** window if it is open.  Then, launch **"Server Manager"** (if it isn't open already) by clicking on the shortcut on the toolbar:
 
 	![2080SeverManagerShortcut](images/2080severmanagershortcut.png?raw=true "Server Manager Shortcut")
 
@@ -341,6 +341,7 @@ In this task, we'll download the AdventureWorks2012 Database file from CodePlex 
 	![2244AdventureWorksCatalog](images/2244adventureworkscatalog.png?raw=true "AdventureWorksCatalog")
 
 1. Double-click on the new **"AdventureWorksCatalog"** to open it's properties
+
 	![2246OpenAdventureWorksCatalog](images/2246openadventureworkscatalog.png?raw=true "Open AdventureWorksCatalog")
 
 1. In the **"Full-Text Catalog Properites - AdventureWorksCatalog*"" window, switch to the **"Tables/Views"** page, and in the **"All eligible table/view objects in the database"** list, locate the **"Production.Product"** table. Then click the right-arrow button to add it to the tables assigned to the catalog:
