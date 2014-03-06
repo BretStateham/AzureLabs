@@ -331,7 +331,28 @@ In this task, we'll download the AdventureWorks2012 Database file from CodePlex 
 1. You should now see the AdventureWorks2012 database in the **"Object Explorer"** window:
 
 	![2240AdventureWorks2012](images/2240adventureworks2012.png?raw=true "AdventureWorks2012")
-	
+
+1. Expand the **"Databases"** | **"AdventureWorks2012"** | **"Storage"**.  Right-click on **"Full Text Catalogs"**, and select **"New Full-Text Catalog..."** from the pop-up menu:
+
+	![2242NewFullTextCatalog](images/2242newfulltextcatalog.png?raw=true "New Full Text Catalog")
+
+1. In the **"New Full-Text Catalog - AdventureWorks2012"** window, enter **"AdventureWorksCatalog*"" for the **Full-text catalog name"** and click **"OK"**:
+
+	![2244AdventureWorksCatalog](images/2244adventureworkscatalog.png?raw=true "AdventureWorksCatalog")
+
+1. Double-click on the new **"AdventureWorksCatalog"** to open it's properties
+	![2246OpenAdventureWorksCatalog](images/2246openadventureworkscatalog.png?raw=true "Open AdventureWorksCatalog")
+
+1. In the **"Full-Text Catalog Properites - AdventureWorksCatalog*"" window, switch to the **"Tables/Views"** page, and in the **"All eligible table/view objects in the database"** list, locate the **"Production.Product"** table. Then click the right-arrow button to add it to the tables assigned to the catalog:
+
+	![2247AddProductionProduct](images/2247addproductionproduct.png?raw=true "Add the Product.Product Table")
+
+1. In the **"Eligible Columns" list, turn on the checkbox next to the **"Name"** column, and click **"OK"**:
+
+	![2248IndexName](images/2248indexname.png?raw=true "Index Name")
+
+	> **Note:** These steps created a Full-Text catalog and index that will make searching for words within the Production.Product's Name column much faster than a traditional SQL Server index on the name column.  The website will leverage this index to quickly find products based on their names.  
+
 <a name="Ex2T3"></a>
 #### Task 3 - Creating the "CloudShop" SQL Server Login ####
 
@@ -521,7 +542,7 @@ The following steps will take place back on your development workstation.
 
 1. The Windows Server image we used already had the .NET 4.0 framework installed, however, because we added IIS AFTER it the .NET Framework was installed, we need to register the latest version of ASP.NET with IIS.
 
-1. On the web server virtual machine, open a command prompt.  and change to the **"C:\Windows\Microsoft.NET\Framework\v4.30319"** directory.  Then run **"aspnet_regiis.exe -i"**.
+1. On the web server virtual machine, open a command prompt.  and change to the **"C:\Windows\Microsoft.NET\Framework\v4.0.30319"** directory.  Then run **"aspnet_regiis.exe -i"**.
 
 	![3220RunASPNetRegIIS](images/3220runaspnetregiis.png?raw=true "Run aspnet_regiis")
 
@@ -572,9 +593,32 @@ The following steps will take place back on your development workstation.
 
 	![3300TestingCloudShopOnWebVM](images/3300testingcloudshoponwebvm.png?raw=true "TestingCloudShoponWebVM")
 
-	> **Note:** This test is testing directly from the Web Server VM itself, and is not going through the load balanced endpoint we created earlier.  We will test from an external browswer in the next task.
+	> **Note:** This test is testing directly from the Web Server VM itself, and is not going through the load balanced endpoint we created earlier.  You should see the server name (IISVMx) show up next to the word "Products" in the header.  Since you aren't going through the load balancer, it will always show the name of the local server. We will test from an external browswer in the next task.  
 
 1. Make sure to complete the steps in this task for both **iisvm1** and **iisvm2** before continuing.
 
 <a name="Ex3T4"></a>
 #### Task 4 - Test the Web Site  ####
+
+1. Back on your personal workstation, login to the Windows Azure Management Portal (https://manage.windowsazure.com), and navigate to the **"Cloud Services"** page. 
+
+1. **Right-Click** the the link in the **"URL"** column for the cloud service you created earlier in Exercise 1, and select **"Copy shortcut"** from the pop-up menu: 
+
+	![3310CopyCloudServiceURL](images/3310copycloudserviceurl.png?raw=true "Copy the Cloud Service URL")
+
+1. In a new browser window or tab, pase in the URL and add the **"CloudShop"** application name to the end of it (e.g. http://<your cloud service name>.cloudapp.net/CloudShop or http://cloudshopdemo.cloudapp.net/CloudShop) and navigate to the URL. Verify that the site loads, and note the name of the server that shows up in the header: 
+
+	![3320CloudShopTest](images/3320cloudshoptest.png?raw=true "Testing Cloud Shop")
+
+1. Try refreshing the browser (you may need to do it multiple times) until the other web server name shows up in the header:
+
+	![3330VerifyLoadBalancing](images/3330verifyloadbalancing.png?raw=true "Verify Load Balancing")
+
+1. Finally, try entering a search term  and clicking on the **"Search"** link to verify that the full-text catalog is being searched correctly:
+
+	![3340VerifyFullTextSearch](images/3340verifyfulltextsearch.png?raw=true "Verify Full Text Search")
+
+<a name="Summary"></a>
+### Summary ###
+
+Congratulations!  In this lab you configured a Cloud Service with two Web Server VMs and one SQL Server VM.  You configured the SQL VM to host a database, and allow connections from the Web Server, and you uploaded and configured an MVC4 website onto the Web Servers. 

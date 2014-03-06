@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Markdown Preview</title>
+<style>
+body{font-family:helvetica, arial, freesans, clean, sans-serif;color:#333;line-height:1.6;font-size:14px}.markdown-body{line-height:1.6;font-size:14px}.markdown-body > *:first-child{margin-top:0 !important}.markdown-body > *:last-child{margin-bottom:0 !important}.markdown-body a.absent{color:#c00}.markdown-body h1{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:28px;margin:20px 0 10px;padding:0}.markdown-body h2{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:24px;border-bottom-color:#ccc;border-bottom-width:1px;border-bottom-style:solid;margin:20px 0 10px;padding:0}.markdown-body h3{font-weight:700;-webkit-font-smoothing:antialiased;font-size:18px;margin:20px 0 10px;padding:0}.markdown-body h4{font-weight:700;-webkit-font-smoothing:antialiased;font-size:16px;margin:20px 0 10px;padding:0}.markdown-body h5{font-weight:700;-webkit-font-smoothing:antialiased;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body h6{font-weight:700;-webkit-font-smoothing:antialiased;color:#777;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body blockquote{color:#777;border-left-color:#ddd;border-left-width:4px;border-left-style:solid;margin:15px 0;padding:0 15px}.markdown-body dl{margin:15px 0;padding:0}.markdown-body table{border-collapse:collapse;margin:15px 0;padding:0}.markdown-body pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;margin:15px 0;padding:6px 10px}.markdown-body li p.first{display:inline-block}.markdown-body dl dt{font-size:14px;font-style:italic;font-weight:700;margin:15px 0 5px;padding:0}.markdown-body dl dt:first-child{padding:0}.markdown-body dl dd{margin:0 0 15px;padding:0 15px}.markdown-body table tr{border-top-color:#ccc;border-top-width:1px;border-top-style:solid;background-color:#fff;margin:0;padding:0}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%}.markdown-body span.frame{overflow:hidden;display:block}.markdown-body span.frame > span{border:1px solid #ddd;width:auto;overflow:hidden;float:left;display:block;margin:13px 0 0;padding:7px}.markdown-body span.frame span img{float:left;display:block}.markdown-body span.frame span span{color:#333;clear:both;display:block;padding:5px 0 0}.markdown-body span.align-center > span{text-align:center;overflow:hidden;display:block;margin:13px auto 0}.markdown-body span.align-center span img{text-align:center;margin:0 auto}.markdown-body span.align-right > span{text-align:right;overflow:hidden;display:block;margin:13px 0 0}.markdown-body span.align-right span img{text-align:right;margin:0}.markdown-body span.float-left{overflow:hidden;margin-right:13px;float:left;display:block}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{overflow:hidden;margin-left:13px;float:right;display:block}.markdown-body span.float-right > span{text-align:right;overflow:hidden;display:block;margin:13px auto 0}.markdown-body pre > code{border:currentColor;white-space:pre;margin:0;padding:0}.markdown-body .highlight pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;padding:6px 10px}.markdown-body p,.markdown-body li{margin:15px 0}.markdown-body ul,.markdown-body ol{padding-left:30px;margin:15px 0}.markdown-body > h2:first-child,.markdown-body > h1:first-child,.markdown-body > h1:first-child + h2{border:0 currentColor;padding-top:0;margin-top:0}.markdown-body > h3:first-child,.markdown-body > h4:first-child,.markdown-body > h5:first-child,.markdown-body > h6:first-child{padding-top:0;margin-top:0}.markdown-body h1 + p,.markdown-body h2 + p,.markdown-body h3 + p,.markdown-body h4 + p,.markdown-body h5 + p,.markdown-body h6 + p,.markdown-body ul li > :first-child,.markdown-body ol li > :first-child,.markdown-body dl dt > :first-child,.markdown-body dl dd > :first-child,.markdown-body blockquote > :first-child,.markdown-body table tr th > :first-child,.markdown-body table tr td > :first-child{margin-top:0}.markdown-body ul li > :last-child,.markdown-body ol li > :last-child,.markdown-body dl dt > :last-child,.markdown-body dl dd > :last-child,.markdown-body blockquote > :last-child,.markdown-body table tr th > :last-child,.markdown-body table tr td > :last-child{margin-bottom:0}.markdown-body table tr th,.markdown-body table tr td{border:1px solid #ccc;text-align:left;margin:0;padding:6px 13px}.markdown-body span.align-center,.markdown-body span.align-right{overflow:hidden;clear:both;display:block}.markdown-body code,.markdown-body tt{border-radius:3px;border:1px solid #eaeaea;white-space:nowrap;background-color:#f8f8f8;margin:0 2px;padding:0 5px}.markdown-body pre code,.markdown-body pre tt{border:currentColor;background-color:transparent}span.codelanguage{display:none}
+</style>
+</head>
+<body>
+<div class="markdown-body">
+<p><a name="HOLTop"></a></p>
+
+<h1 id="Introduction_to_Windows_Azure_Virtual_Machines">Introduction to Windows Azure Virtual Machines</h1>
+
+<hr>
+
+<p><a name="Overview"></a></p>
+
+<h2 id="Overview">Overview</h2>
+
+<p>Using Windows Azure as your Infrastructure as a Service (IaaS) platform, will enable you to create and manage your infrastructure quickly, provisioning and accessing any host ubiquitously. Grow your business through the cloud-based infrastructure, reducing the costs of licensing, provisioning and backup.</p>
+
+<p>In this hands-on Lab, you will learn how to deploy a simple ASP.NET MVC 4 Web application to a pair of Load Balanced Web Server Virtual Machines hosted in Windows Azure.  The website will consume data hosted in SQL Server instance running on a third Virtual Machine.</p>
+
+<p><img src="images/0010labservicearchitecture.png?raw=true" alt="0010LabServiceArchitecture" title="Lab Service Architecture">
+</p>
+
+<p><a name="Objectives"></a></p>
+
+<h3 id="Objectives">Objectives</h3>
+
+<p>In this hands-on lab, you will learn how to:</p>
+
+<ul>
+<li>Create a Web Farm using Windows Azure Management Portal</li>
+<li>Configure Load Balancing Endpoints</li>
+<li>Deploy a Simple MVC4 Application that consumes SQL Server Features</li>
+<li>Create a Virtual Machine with SQL Server Full-Text Search feature to be consumed by the MVC Application</li>
+</ul>
+
+<p><a name="Prerequisites"></a></p>
+
+<h3 id="Prerequisites">Prerequisites</h3>
+
+<p>The following is required to complete this hands-on lab:</p>
+
+<ul>
+<li>A Windows Azure subscription - <a href="http://aka.ms/WATK-FreeTrial">sign up for a free trial</a></li>
+</ul>
+
+<hr>
+
+<p><a name="Exercises"></a></p>
+
+<h2 id="Exercises">Exercises</h2>
+
+<p>This hands-on lab includes the following exercises:</p>
+
+<ol>
+<li><a href="#Ex1">Creating the Windows Azure Virtual Machines</a></li>
+<li><a href="#Ex2">Configure the SQL Server Virtual Machine and Database</a></li>
+<li><a href="#Ex3">Configure the Web Server Virtual Machines and Web Sites</a></li>
+</ol>
+
+<p>Estimated time to complete this lab: <strong>45 minutes</strong>.</p>
+
+<p><a name="Ex1"></a></p>
+
+<h3 id="Exercise_1_Creating_the_Windows_Azure_Virtual_Machines">Exercise 1: Creating the Windows Azure Virtual Machines</h3>
+
+<p>In this exercise, you will provision the three Windows Azure Virtual Machines used throughout the lab.  Specifically you will</p>
+
+<ul>
+<li><p>Create the <strong>SQL Server Virtual Machine</strong> (<strong><em>sqlvm1</em></strong>) that will later host the AdventureWorks2012 database used by the website.  </p>
+
+<p>When you create the SQL Server Virtual Machine, you will also create the <strong>Cloud Service</strong> that will contain all of the Virtual Machines used in this lab.</p></li>
+<li><p>Create the <strong>Web Server Virtual Machines</strong> (<strong><em>iismv1</em></strong> and <strong><em>iisvm2</em></strong>) that will host the load balanced web site. You will add those VMs to the same cloud service that <strong><em>sqlvm1</em></strong> is in.</p></li>
+</ul>
+
+<p>The highlighted portion of the following diagram shows what you will configure in this exercise.</p>
+
+<p><img src="images/1010labservicearchitectureex1.png?raw=true" alt="1010LabServiceArchitectureEx1" title="Architecture after Exercise 1">
+</p>
+
+<p><a name="Ex1T1"></a></p>
+
+<h4 id="Task_1_-_Creating_the_SQL_VM_and_the_Cloud_Service">Task 1 - Creating the SQL VM and the Cloud Service</h4>
+
+<ol>
+<li><p>Open the <strong><a href="https://manage.windowsazure.com/" title="Windows Azure Management Portal">Windows Azure Management Portal</a></strong> (<a href="https://manage.windowsazure.com">https://manage.windowsazure.com</a>) and login with your credentials.</p></li>
+<li><p>In the menu bar along the bottom of the portal click <strong>+NEW</strong> </p>
+
+<p><img src="images/1020newbutton.png?raw=true" alt="1020NewButton" title="New Button">
+</p></li>
+<li><p>Then select <strong>COMPUTE</strong> | <strong>VIRTUAL MACHINE</strong> | <strong>FROM GALLERY</strong> </p>
+
+<p><img src="images/1030newvmfromgallery.png?raw=true" alt="1030NewVMFromGallery" title="New VM From Gallery">
+</p></li>
+<li><p>In the &quot;CREATE A VIRTUAL MACHINE WIZARD&quot;, on the &quot;Coose an Image&quot; page, scroll down to find and select the &quot;SQL Server 2012 SP1 Enterprise on Windows Server 2008 R2&quot; image and click the next (arrow) button.</p>
+
+<p><img src="images/1040sqlimage.png?raw=true" alt="1040SQLImage" title="SQL Server 2012 SP1 Enterprise on Windows Server 2008 R2">
+</p></li>
+<li><p>On the &quot;Virtual machine configuration&quot; page:</p>
+
+<ul>
+<li>VERSION RELEASE DATE: <strong><em>Choose the latest date</em></strong></li>
+<li>VIRTUAL MACHINE NAME: <strong><em>sqlvm1</em></strong> (Use this name.  using a different name will cause issues later in the lab).</li>
+<li>SIZE: <strong><em>Small (1 core, 1.75 GB memory)</em></strong> (You don't need anything bigger for this lab)</li>
+<li>NEW USER NAME: <strong><em>CloudShop</em></strong></li>
+<li>NEW PASSWORD:  <strong><em>Azure$123</em></strong></li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> You can use a different user name and password, but it is recommended that you use the values above for consistency.  These will be used as the user name and password for the built-in administrator account in the Windows virtual machine.  Regardless of what you use, it is highly recommended that you use the same credentials for all three Virtual Machines to help eliminate any confusion during the lab. </p>
+</blockquote>
+<p><img src="images/1050vmconfig.png?raw=true" alt="1050VMConfig" title="Virtual Machine Configuration">
+</p></li>
+<li><p>On the second <strong>&quot;Virtual machine configuration&quot;</strong> page, enter:</p>
+
+<ul>
+<li>CLOUD SERVICE: <strong><em>Create a new cloud service</em></strong></li>
+<li>CLOUD SERVICE DNS NAME: <strong><em>Enter a unique valid DNS host name.</em></strong>.<br>
+The name CloudShopDemo is used as a sample throughout this lab, but you will need to use your own unique name instead.</li>
+<li>REGION/AFFINITY GROUP/VIRTUAL NETWORK: <strong><em>Pick a region close to you</em></strong></li>
+<li>STORAGE ACCOUNT: <strong><em>Use an automatically generated storage account</em></strong></li>
+<li>AVAILABILITY SET: <strong><em>(None)</em></strong></li>
+</ul>
+
+<p><img src="images/1060vmconfig2.png?raw=true" alt="1060VMConfig2" title="Virtual Machine Configuration">
+</p></li>
+<li><p>On the third final <strong>&quot;Virtual machine configuration&quot;</strong> page, accept the default values and click the &quot;Check Mark&quot; button in the lower right corner to complete the wizard.</p>
+
+<p><img src="images/1070vmconfig3.png?raw=true" alt="1070VMConfig3" title="Virtual Machine Configuration Page 3">
+</p>
+<blockquote>
+<p><strong>Note:</strong> The Virtual Machine already has endpoints for Remote Desktop connections as well as for remote PowerShell scripts.  </p>
+</blockquote></li>
+<li><p>In the portal, you should now see the <strong><em>sqlvm1</em></strong> virtual machine with a status of <strong>Starting (Provisioning)</strong>.  Wait until the status reads just <strong>Starting</strong> (about 1-2 minutes) before proceeding with the next task. </p>
+
+<p><img src="images/1080sqvm1provisioning.png?raw=true" alt="1080SQVM1Provisioning" title="SQLVM1 Provisioning">
+</p></li>
+</ol>
+
+<p><a name="Ex1T2"></a></p>
+
+<h4 id="Task_2_-_Adding_the_Web_Server_Virtual_Machines_to_the_Cloud_Service">Task 2 - Adding the Web Server Virtual Machines to the Cloud Service</h4>
+
+<p>In this task, you will create BOTH of the Web Server Virtual Machines, <strong>iisvm1</strong> and <strong>iismv2</strong>.  The steps to create them are identical with the exception of the name.  </p>
+
+<ol>
+<li><p>Wait until the previous virtual machine has been provisioning for a couple of minutes. </p></li>
+<li><p>Click the +NEW Button along the bottom and select <strong>COMPUTE</strong> | <strong>VIRTUAL MACHINE</strong> | <strong>FROM GALLERY</strong></p>
+
+<p><img src="images/1090newvmfromgallery.png?raw=true" alt="1090NewVMFromGallery" title="New VM From Gallery">
+</p></li>
+<li><p>In the <strong>&quot;CREATE A VIRTUAL MACHINE&quot;</strong> wizard, on the <strong>&quot;Choose an Image&quot;</strong> page, select the &quot;Windows Server 2008 R2 SP1&quot; image and click the next (arrow) button to continue:</p>
+
+<p><img src="images/1100win2k8vmimage.png?raw=true" alt="1100Win2K8VMImage" title="Windows Server 2008 R2 SP1 Image">
+</p></li>
+<li><p>On the first <strong>&quot;Virtual machine configuration&quot;</strong> page:</p>
+
+<ul>
+<li>VERSION RELEASE DATE: <strong><em>Choose the latest date</em></strong></li>
+<li>VIRTUAL MACHINE NAME: <strong><em>iisvm1</em></strong> for the first vm, <strong><em>iisvm2</em></strong> for the second</li>
+<li>SIZE: <strong><em>Small 1 core, 1.75 GB memory)</em></strong></li>
+<li>NEW USER NAME: <strong><em>CloudShop</em></strong> (or the same name you used for <strong><em>sqlvm1</em></strong>)</li>
+<li>NEW PASSWORD: <strong><em>Azure$123</em></strong> (or the same password you used for <strong><em>sqlvm1</em></strong>)</li>
+</ul>
+
+<p><img src="images/1110vmconfig2.png?raw=true" alt="1110VMConfig2" title="Virtual Machine Configuration Page 2">
+</p></li>
+<li><p>On the second <strong>&quot;Virtual machine configuration&quot;</strong> page:</p>
+
+<ul>
+<li>CLOUD SERVICE: Choose the cloud service you created previously while creating <strong><em>sqlvm1</em></strong>.</li>
+<li>Leave all the other options at the default</li>
+</ul>
+
+<p><img src="images/1120vmconfig2.png?raw=true" alt="1120VMConfig2" title="Virtual Machine Configuration Page 2">
+</p></li>
+<li><p>On the third and final <strong>&quot;Virtual machine configuration&quot;</strong> page, leave the default values and click the &quot;Check Mark&quot; button in the lower right corner to complete the wizard.  </p>
+
+<p><img src="images/1130vmconfig3.png?raw=true" alt="1130VMConfig3" title="Virtual Machine Configuration Page 3">
+</p></li>
+<li><p>After creating <strong>iisvm1</strong> (and waiting 1-2 minutes to continue) then repeat the steps above to create <strong>iisvm2</strong></p></li>
+<li><p>Once all three virtual machines have been created, <strong>wait until at least the sqlvm1 status reads &quot;Running&quot;</strong> before proceeding to the next task.  <strong>This could take anywhere from 10-30 minutes</strong>.  Now is a good time to take a break! </p>
+
+<p><img src="images/1140vmsrunning.png?raw=true" alt="1140VMsRunning" title="Virtual Machines Running">
+</p></li>
+</ol>
+
+<p><a name="Ex2"></a></p>
+
+<h3 id="Exercise_2_Configure_the_SQL_Server_Virtual_Machine_and_Database">Exercise 2: Configure the SQL Server Virtual Machine and Database</h3>
+
+<p>In this exercise, we will configure the SQL Server Virtual Machine (<strong><em>sqlvm1</em></strong>) that we created in the previous exercise.  Specifically, we will </p>
+
+<ul>
+<li>Add two additional disks to the SQL Server to store the database data files and logs</li>
+<li>Download the AdventureWorks2012 database and attach it to the SQL Server Instance</li>
+<li>Create a SQL Server Login that will be used by the websites to access the AdventureWorks2012 database</li>
+<li>Setup a Firewall rule to allow TCP connections to the SQL Server service running on port 1433</li>
+</ul>
+
+<p>The highlighted portion of the following diagram shows what you will configure in this exercise.</p>
+
+<p><img src="images/2010labservicearchitectureex2.png?raw=true" alt="2010LabServiceArchitectureEx2" title="Architecture after Exercise 2">
+</p>
+
+<p><a name="Ex2T1"></a></p>
+
+<h4 id="Task_1_-_Adding_additional_Disks_to_the_SQL_Server_Virtual_Machine">Task 1 - Adding additional Disks to the SQL Server Virtual Machine</h4>
+
+<ol>
+<li><p>In the Windows Azure Management Portal, on the &quot;VIRTUAL MACHINES&quot; page, click on the name of the &quot;sqlvm1&quot; virtual machine, then switch to it's DASHBOARD page. Scroll to the bottom to see that there is only a single drive attached to the VM.</p>
+
+<p><img src="images/2012sqlvm1drive.png?raw=true" alt="2012SQLVM1Drive" title="SQLVM1 Drive">
+</p></li>
+<li><p>Click the <strong>&quot;ATTACH&quot;</strong> button along the bottom, and select <strong>&quot;Attach empty disk&quot;</strong>:</p>
+
+<p><img src="images/2014attachemptydisk.png?raw=true" alt="2014AttachEmptyDisk" title="Attach Empty Disk">
+</p></li>
+<li><p>In the &quot;Attach an empty disk...&quot; window, you don't need to change anything except the size.  Enter <strong>50</strong> for the <strong>SIZE (GB)</strong>:</p>
+
+<p><img src="images/2016vhdsize.png?raw=true" alt="2016VHDSize" title="VHD Size">
+</p></li>
+<li><p>Once the first drive is successfully attached, repeat the process to attach a second drive.  These two drives will be used to store the SQL Server database files, logs and backups.  Once you are done, there should be a total of three drives on the sqlvm1 virtual machine.</p>
+
+<p><img src="images/2018sqlvm1drives.png?raw=true" alt="2018SQLVM1Drives" title="SQLVM1 Drives">
+</p></li>
+<li><p>While still on the sqlvm1 dashboard page, click the &quot;CONNECT&quot; button along the bottom.</p>
+
+<p><img src="images/2020connecttosqlvm1.png?raw=true" alt="2020ConnectToSQLVM1" title="Connect to SQLVM1">
+</p></li>
+<li><p>You will see an informational message from the portal instructing you to open the .rdp file when prompted. Click OK to clear the message:</p>
+
+<p><img src="images/2030rdpinfomsg.png?raw=true" alt="2030RDPInfoMsg" title="RDP File Informational Message">
+</p></li>
+<li><p>Then, when prompted, open the RDP file:</p>
+
+<p><img src="images/2040openrdpfile.png?raw=true" alt="2040OpenRDPFile" title="Open the RDP File">
+</p></li>
+<li><p>You may see a prompt about the publisher not being able to be verified, if you do click &quot;Connect&quot;:</p>
+
+<p><img src="images/2050rdppublisherverification.png?raw=true" alt="2050RDPPublisherVerification" title="RDP Publisher Verification">
+</p></li>
+<li><p>When prompted, enter the credentials you used for the sqlvm1 administrator account (<strong>CloudShop/Azure$123</strong>)</p>
+
+<p><img src="images/2060credentials.png?raw=true" alt="2060Credentials" title="Credentials">
+</p></li>
+<li><p>You should see a final prompt to verify the identity of the remote computer.  You can turn on the &quot;Don't ask me again...&quot; checkbox to prevent this dialog appearing in the future for this VM.  Click &quot;Yes&quot; to connect:</p>
+
+<p><img src="images/2070rdpidentity.png?raw=true" alt="2070RDPIdentity" title="RDP Identity Confirmation">
+</p></li>
+<li><p>Once you are connected to sqlvm1 via remote desktop, you can close the &quot;Initial Configuration&quot; window if it is open.  Then, launch &quot;Server Manager&quot; (if it isn't open already) by clicking on the shortcut on the toolbar:</p>
+
+<p><img src="images/2080severmanagershortcut.png?raw=true" alt="2080SeverManagerShortcut" title="Server Manager Shortcut">
+</p></li>
+<li><p>In the <strong>&quot;Server Manager&quot;</strong> window, on the <strong>&quot;Server Manager (SQLVM1)&quot;</strong> page, click the &quot;Configure IE ESC&quot; link.</p>
+<blockquote>
+<p><strong>Note:</strong> We don't actually need this until we download the AdventureWorks2012 database later in the lab, but we are doing it now since we are here. </p>
+</blockquote>
+<p><img src="images/2080configureieesclink.png?raw=true" alt="2080ConfigureIeEscLink" title="Configure IE ESC">
+</p></li>
+<li><p>Then, in the <strong>&quot;Internet Explorer Enhanced Security Configuration&quot;</strong> window, under <strong>&quot;Administrators&quot;</strong> select <strong>&quot;Off&quot;</strong>, then click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/2090ieescoff.png?raw=true" alt="2090IeEscOff" title="IE ESC Off for Administrators">
+</p>
+<blockquote>
+<p><strong>Note:</strong> This will allow us to download files from the internet.  We'll need that later so that we can download the AdventureWorks2012 Database.</p>
+</blockquote></li>
+<li><p>Back in the <strong>&quot;Server Manager&quot;</strong> window, expand the <strong>&quot;Storage&quot;</strong> node, and select <strong>&quot;Disk Management&quot;</strong>.  Then, in the <strong>&quot;Initialize Disk&quot;</strong> window, ensure that the checkmark is on for both disks, and click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/2100storageinitialization.png?raw=true" alt="2100StorageInitialization" title="Storage Initialization">
+</p></li>
+<li><p><strong>You will repeat the following steps twice</strong>, once for each drive we attached to SQLVM1.  You will assign the drive letter &quot;F&quot; and a volume name of &quot;SQLData&quot; to the first drive, and then you will assign the drive letter &quot;G&quot; and a volume name of &quot;SQLLogs&quot; to the second drive.  </p></li>
+<li><p><strong>Right click</strong> on an &quot;Unallocated&quot; drive, and select &quot;New Simple Volume...&quot; from the pop-up menu:</p>
+
+<p><img src="images/2110newsimplevolume.png?raw=true" alt="2110NewSimpleVolume" title="New Simple Volume">
+</p></li>
+<li><p>On the <strong>&quot;Welcome to the New Simple Volume Wizard&quot;</strong> page, click <strong>&quot;Next&quot;</strong>:</p>
+
+<p><img src="images/2120nsvwpage1.png?raw=true" alt="2120NSVWPage1" title="New Simple Volume Wizard Welcome Page">
+</p></li>
+<li><p>On the &quot;Specify Volume Size&quot; page, leave the default value, and click <strong>&quot;Next&quot;</strong>:</p>
+
+<p><img src="images/2130nsvwpage2.png?raw=true" alt="2130NSVWPage2" title="Simple Volume Size">
+</p></li>
+<li><p>On the <strong>&quot;Assign Drive Letter or Path&quot;</strong> page, assign the drive letter &quot;F&quot; for the first volume, and assign the drive letter &quot;G&quot; for the second volume.</p>
+
+<p><img src="images/2140assigndriveletter.png?raw=true" alt="2140AssignDriveLetter" title="Assign Drive Letter">
+</p></li>
+<li><p>On the <strong>&quot;Format Partition&quot;</strong> page, leave all the values at the default except set the <strong>&quot;Volume label&quot;</strong> to <strong>&quot;SQLData&quot;</strong> for the first drive and <strong>&quot;SQLLogs&quot;</strong> for the second drive. </p>
+
+<p><img src="images/2150formatpartition.png?raw=true" alt="2150FormatPartition" title="Format Partition">
+</p></li>
+<li><p>On the <strong>&quot;Completing the New Simple Volume Wizard&quot;</strong> page, click <strong>&quot;Finish&quot;</strong> </p>
+
+<p><img src="images/2160completethewizard.png?raw=true" alt="2160CompleteTheWizard" title="Complete the Wizard">
+</p></li>
+<li><p>Again, make sure you repeat the steps above to format both new drives.  When you are done you should have two new drive letters (F &amp; G) available.</p>
+
+<p><img src="images/2170newlyformatteddrives.png?raw=true" alt="2170NewlyFormattedDrives" title="Newly Formatted Drives">
+</p></li>
+<li><p>In the open the new drives in Windows Explorer and create the following folders.  Later, we will configure SQL Server to use these new folders rather than the default folders on the C: Drive:</p>
+
+<ul>
+<li><strong>F:\Data</strong></li>
+<li><strong>G:\Logs</strong></li>
+<li><strong>G:\Backups</strong></li>
+</ul>
+
+<p><img src="images/2180newfolders.png?raw=true" alt="2180NewFolders" title="New Folders">
+</p></li>
+</ol>
+
+<p><a name="Ex2T2"></a></p>
+
+<h4 id="Task_2_-_Downloading_and_Attaching_the_AdventureWorks2012_Database">Task 2 - Downloading and Attaching the AdventureWorks2012 Database</h4>
+
+<p>In this task, we'll download the AdventureWorks2012 Database file from CodePlex into our new <strong>&quot;F:\Data&quot;</strong> folder, configure SQL Server to use our new data, logs, and backups folders, attach the AdventureWorks2012 database to SQL Server, and configure the full text catalog used by the website.  </p>
+
+<ol>
+<li><p>Still working in the SQLVM1 Remote Desktop connection, open Internet Explorer.  If prompted, select <strong>&quot;Use recommended security...&quot;</strong> and click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/2190iesettings.png?raw=true" alt="2190IESettings" title="IE Settings">
+</p></li>
+<li><p>Navigate to the SQL Server Product Samples page on codeplex by opening <a href="http://msftdbprodsamples.codeplex.com">http://msftdbprodsamples.codeplex.com</a> in Internet Explorer on SQLVM1.  Then click on the &quot;SQL Server 2012 OLTP&quot; link:</p>
+
+<p><img src="images/2200sqlsamples.png?raw=true" alt="2200SQLSamples" title="SQL Samples">
+</p></li>
+<li><p>On thge &quot;Adventure Works for SQL Server 2012&quot; page, click the <strong>&quot;AdventureWorks2012 Data File Link&quot;</strong>, and when prompted save the file to the <strong>&quot;F:\Data&quot;</strong> folder. Close IE when the download is complete.</p>
+
+<p><img src="images/2210downloadadventureworks.png?raw=true" alt="2210DownloadAdventureWorks" title="Download the AdventureWorks2012 Database">
+</p></li>
+<li><p>From the SQLVM1 Start Menu, select <strong>&quot;All Programs&quot;</strong> | <strong>&quot;Microsoft SQL Server 2012&quot;</strong> | <strong>&quot;SQL Server Management Studio&quot;</strong></p>
+
+<p><img src="images/2220startssms.png?raw=true" alt="2220StartSSMS" title="Start SSMS">
+</p></li>
+<li><p>When prompted, connect to the SQLVM1 instance:</p>
+
+<p><img src="images/2230connecttosqlmv1.png?raw=true" alt="2230ConnectToSQLMV1" title="Connect to SQLVM1">
+</p></li>
+<li><p>In the <strong>&quot;Object Explorer&quot;</strong> window, right click the &quot;SQLVM1&quot; server name and select &quot;Properties&quot; from the pop-up menu:</p>
+
+<p><img src="images/2240opendatabaseproperties.png?raw=true" alt="2240OpenDatabaseProperties" title="Open Database Properties">
+</p></li>
+<li><p>In the <strong>&quot;Server Properties - SQLVM1&quot;</strong> window, switch to the <strong>&quot;Security&quot;</strong> Page, and select <strong>&quot;SQL Server and Windows Authentication Mode&quot;</strong>.  </p>
+
+<p><img src="images/2250mixedauth.png?raw=true" alt="2250MixedAuth" title="Enabled Mixed Authentication">
+</p>
+<blockquote>
+<p><strong>Note:</strong> We need this because the websites will connect to the server using &quot;SQL Server Authentication&quot; rather than &quot;Windows Authentication&quot;</p>
+</blockquote></li>
+<li><p>Next, switch to the <strong>&quot;Database Settings&quot;</strong> page, and set the <strong>Data</strong>, <strong>Log</strong> and <strong>Backups</strong> default folders to the F:Data, G:\Logs and G:\Backups folders respectively. Then click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/2260databasedefaultfolders.png?raw=true" alt="2260DatabaseDefaultFolders" title="Database Default Folders">
+</p></li>
+<li><p>You will be notified that the changes won't take effect until we restart the SQL Server instance is restarted.  Click <strong>&quot;OK&quot;</strong> to continue:</p>
+
+<p><img src="images/2270restartnotice.png?raw=true" alt="2270RestartNotice" title="Restart Notice">
+</p></li>
+<li><p>To restart the SQLVM1 SQL Server, right click on the SQLVM1 server name in the SQL Server Management Studio Object Explorer window, select &quot;Restart&quot; from the pop-up menu, then click <strong>&quot;Yes&quot;</strong> when asked if you are sure you want to restart:</p>
+
+<p><img src="images/2280restartsql.png?raw=true" alt="2280RestartSQL" title="Restart SQL">
+</p></li>
+<li><p>Once the server has restarted, right click the &quot;Databases&quot; node and select &quot;Attach...&quot;</p>
+
+<p><img src="images/2290attachdatabase.png?raw=true" alt="2290AttachDatabase" title="Attach Database">
+</p></li>
+<li><p>In the <strong>&quot;Attach Databases&quot;</strong> window, click the <strong>&quot;Add...&quot;</strong> button:</p>
+
+<p><img src="images/2300addbutton.png?raw=true" alt="2300AddButton" title="Add Button">
+</p></li>
+<li><p>Select the <strong>&quot;F:\Data\AdventureWorks2012_Data.mdf&quot; data file and click **&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/2310adventureworksdatafile.png?raw=true" alt="2310AdventureWorksDataFile" title="AdventureWorks Data File">
+</p></li>
+<li><p>Back in the <strong>&quot;Attach Databases&quot;</strong> window, select the <strong>&quot;AdventureWorks2012_Log.ldf&quot;</strong> file (listed as Not Found) and click the <strong>&quot;Remove&quot;</strong> button.  </p>
+
+<p><img src="images/2320removelogfile.png?raw=true" alt="2320RemoveLogFile" title="Remove Log File">
+</p>
+<blockquote>
+<p><strong>Note:</strong> Recall that we ONLY donloaded the <strong>Data</strong> file.  However, since the original datafile was property detached from the source server, it is at a consistent state, and the transaction logs are needed.  We can let SQL Server just create a new one on the fly.  By removing this one, SQL will create a new one when we attach the database. </p>
+</blockquote></li>
+<li><p>Click the <strong>&quot;OK&quot;</strong> button to attach the AdventureWorks2012 database:</p>
+
+<p><img src="images/2230attachadventureworks2012.png?raw=true" alt="2230AttachAdventureWorks2012" title="Attach AdventureWorks2012">
+</p></li>
+<li><p>You should now see the AdventureWorks2012 database in the <strong>&quot;Object Explorer&quot;</strong> window:</p>
+
+<p><img src="images/2240adventureworks2012.png?raw=true" alt="2240AdventureWorks2012" title="AdventureWorks2012">
+</p></li>
+<li><p>Expand the <strong>&quot;Databases&quot;</strong> | <strong>&quot;AdventureWorks2012&quot;</strong> | <strong>&quot;Storage&quot;</strong>.  Right-click on <strong>&quot;Full Text Catalogs&quot;</strong>, and select <strong>&quot;New Full-Text Catalog...&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/2242newfulltextcatalog.png?raw=true" alt="2242NewFullTextCatalog" title="New Full Text Catalog">
+</p></li>
+<li><p>In the <strong>&quot;New Full-Text Catalog - AdventureWorks2012&quot;</strong> window, enter <strong>&quot;AdventureWorksCatalog*&quot;&quot; for the **Full-text catalog name&quot;</strong> and click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/2244adventureworkscatalog.png?raw=true" alt="2244AdventureWorksCatalog" title="AdventureWorksCatalog">
+</p></li>
+<li><p>Double-click on the new <strong>&quot;AdventureWorksCatalog&quot;</strong> to open it's properties
+<img src="images/2246openadventureworkscatalog.png?raw=true" alt="2246OpenAdventureWorksCatalog" title="Open AdventureWorksCatalog">
+</p></li>
+<li><p>In the <strong>&quot;Full-Text Catalog Properites - AdventureWorksCatalog*&quot;&quot; window, switch to the **&quot;Tables/Views&quot;</strong> page, and in the <strong>&quot;All eligible table/view objects in the database&quot;</strong> list, locate the <strong>&quot;Production.Product&quot;</strong> table. Then click the right-arrow button to add it to the tables assigned to the catalog:</p>
+
+<p><img src="images/2247addproductionproduct.png?raw=true" alt="2247AddProductionProduct" title="Add the Product.Product Table">
+</p></li>
+<li><p>In the <strong>&quot;Eligible Columns&quot; list, turn on the checkbox next to the **&quot;Name&quot;</strong> column, and click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/2248indexname.png?raw=true" alt="2248IndexName" title="Index Name">
+</p>
+<blockquote>
+<p><strong>Note:</strong> These steps created a Full-Text catalog and index that will make searching for words within the Production.Product's Name column much faster than a traditional SQL Server index on the name column.  The website will leverage this index to quickly find products based on their names.  </p>
+</blockquote></li>
+</ol>
+
+<p><a name="Ex2T3"></a></p>
+
+<h4 id="Task_3_-_Creating_the_CloudShop_SQL_Server_Login">Task 3 - Creating the &quot;CloudShop&quot; SQL Server Login</h4>
+
+<p>The websites are pre-configured to connect to the SQL Server instance using a SQL Login named &quot;CloudShop&quot; with a password of &quot;Azure$123&quot;.  For that to work, we need to create a SQL Server Login with those credentials.  </p>
+
+<ol>
+<li><p>In the <strong>SQLVM1 SQL Server Management Studio</strong>, in the <strong>&quot;Object Explorer&quot;</strong> window, expand <strong>&quot;SQLVM1 ...&quot;</strong> | <strong>&quot;Security&quot;</strong> | <strong>&quot;Logins&quot;</strong>.  <strong>Right-Click</strong> on <strong>&quot;Logins&quot;</strong> and select <strong>&quot;New Login...&quot;</strong> from the pop-up menu.</p>
+
+<p><img src="images/2350newlogin.png?raw=true" alt="2350NewLogin" title="New Login">
+</p></li>
+<li><p>In the <strong>&quot;Login - New&quot;</strong> Window, on the <strong>&quot;General&quot;</strong> page, enter:</p>
+
+<ul>
+<li>Login name:  <strong><em>CloudShop</em></strong> (Use this exact name because this is what the website's web.config file is pre-configured to use.  Use &quot;CloudShop&quot; here, even if you used a different name for your virtual machine Windows logins). </li>
+<li>Password: <strong><em>Azure$123</em></strong> (Again, use this exact value including case. The website's web.config file has this value pre-configured). </li>
+<li>Enforce password policy: <strong><em>CLEARED</em></strong></li>
+<li>Default database: <strong><em>AdventureWorks2012</em></strong></li>
+<li>Click <strong>&quot;OK&quot;</strong> to create the new login</li>
+</ul>
+
+<p><img src="images/2360cloudshoplogin.png?raw=true" alt="2360CloudShopLogin" title="CloudShop Login">
+</p></li>
+<li><p>Make sure that you clicked <strong>&quot;OK&quot;</strong> above to create the new login, then immediately double click on the new login to re-open the Login properties.  Then, switch to the <strong>&quot;User Mapping&quot;</strong> page:</p>
+
+<ul>
+<li><strong>Turn on</strong> the checkbox next to the <strong>AdventureWorks2012</strong> database</li>
+<li><strong>Turn on</strong> the checkbox next to the <strong>db_owner</strong> role</li>
+<li>Click <strong>&quot;OK&quot;</strong></li>
+</ul>
+
+<p><img src="images/2270mapuser.png?raw=true" alt="2370MapUser" title="Map User">
+</p>
+<blockquote>
+<p><strong>Note:</strong> There is a glitch in SQL Server Management Studio right now where it can't assign database roles to the user until the login exists.  That is why you had to exit the login properties and re-enter it again to map the login to a user account in the database.</p>
+</blockquote></li>
+<li><p>You can close SQL Server Management Studio when you are done.</p></li>
+</ol>
+
+<p><a name="Ex2T4"></a></p>
+
+<h4 id="Task_4_-_Allowing_SQL_Server_Connections_through_the_Firewall">Task 4 - Allowing SQL Server Connections through the Firewall</h4>
+
+<p>The last step we need to tak on the SQL Server is to open 1433 in the Windows Firewall.  The websites running on <strong><em>iisvm1</em></strong> and <strong><em>iisvm2</em></strong> will need this port open on the <strong><em>sqlvm1</em></strong> machine so they can connect to the SQL Server instance. </p>
+
+<ol>
+<li><p>If needed, on <strong><em>sqlvm1</em></strong> re-open the <strong>&quot;Server Manger&quot;</strong> by clicking on the icon on the task bar:</p>
+
+<p><img src="images/2080severmanagershortcut.png?raw=true" alt="2080SeverManagerShortcut" title="Server Manager Shortcut">
+</p></li>
+<li><p>Expand <strong>&quot;Server Manager (SQLVM1)&quot;</strong> | <strong>&quot;Configuration&quot;</strong> | <strong>&quot;Windows Firewall with Advanced Security&quot;</strong>, then right click on <strong>&quot;Inbound Rules&quot;</strong> and select <strong>&quot;New Rule...&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/3280newrule.png?raw=true" alt="2380NewRule" title="New Rule">
+</p></li>
+<li><p>In the <strong>&quot;New Inbound Rule Wizard&quot;</strong>, on the <strong>&quot;Rule Type&quot;</strong> page, select <strong>&quot;Port&quot;</strong> and click <strong>&quot;Next&quot;</strong>:</p>
+
+<p><img src="images/2390ruletype.png?raw=true" alt="2390RuleType" title="Rule Type">
+</p></li>
+<li><p>On the <strong>&quot;Protocol and Ports&quot;</strong> page, select <strong>&quot;TCP&quot;</strong> and for the <strong>&quot;Specific local ports&quot;</strong> enter <strong>1433</strong>:</p>
+
+<p><img src="images/2400protocolandports.png?raw=true" alt="2400ProtocolAndPorts" title="Protocol and Ports">
+</p></li>
+<li><p>On the <strong>&quot;Action&quot;</strong> page, select <strong>&quot;Allow the connection&quot;</strong>:</p>
+
+<p><img src="images/2410action.png?raw=true" alt="2410Action" title="Action">
+</p></li>
+<li><p>On the <strong>&quot;Profile&quot;</strong> page, enable all profiles:</p>
+
+<p><img src="images/2420profile.png?raw=true" alt="2420Profile" title="Profile">
+</p></li>
+<li><p>On the <strong>&quot;Name&quot;</strong> page, name the rule <strong>&quot;SQLServerRule&quot;</strong>, enter a description, and click <strong>&quot;Finish&quot;</strong>:</p>
+
+<p><img src="images/2430name.png?raw=true" alt="2430Name" title="Name">
+</p></li>
+<li><p>You should see a new inbound rule:</p>
+
+<p><img src="images/2440sqlserverrule.png?raw=true" alt="2440SQLServerRule" title="SQLServerRule">
+</p></li>
+<li><p>You can close <strong>&quot;Sever Manager&quot;</strong> when you are done.</p></li>
+<li><p>You can close the Remote Desktop Connection to SQLVM1 when you are done if you wish, but make sure to just disconnect, don't shut down the SQLVM1 server.  </p></li>
+</ol>
+
+<p><a name="Ex3"></a></p>
+
+<h3 id="Exercise_3_Configure_the_Web_Server_Virtual_Machines_and_Web_Sites">Exercise 3: Configure the Web Server Virtual Machines and Web Sites</h3>
+
+<p>In this exercise, you will configure the Web Server Virtual Machines and the Web site.  Specifically you will:</p>
+
+<ul>
+<li>Add the Load Balanced Endpoint for Port 80</li>
+<li>Configure both Web Server VMs with the Web Server Role and ASP.NET 4.0</li>
+<li>Upload the CloudShop website and configure it in IIS on both Web Server VMs</li>
+<li>Test the Web Site </li>
+</ul>
+
+<p>The highlighted portion of the following diagram shows what you will configure in this exercise.</p>
+
+<p><img src="images/3010labservicearchitectureex3.png?raw=true" alt="3010LabServiceArchitectureEx3" title="Architecture after Exercise 3">
+</p>
+
+<p><a name="Ex3T1"></a></p>
+
+<h4 id="Task_1_-_Add_the_Load_Balanced_Endpoint_for_Port_80">Task 1 - Add the Load Balanced Endpoint for Port 80</h4>
+
+<p>The following steps will take place back on your development workstation.</p>
+
+<ol>
+<li><p>Login the Windows Azure Management Portal (<a href="https://manage.windowsazure.com/">https://manage.windowsazure.com/</a>), and navigate to the <strong>&quot;VIRTUAL MACHINES&quot;</strong> page.  Click on the name of the <strong>&quot;iisvm1*&quot;&quot;, and go to the **&quot;ENDPOINTS&quot;</strong> page, and click the <strong>&quot;ADD&quot;</strong> button along the bottom:</p>
+
+<p><img src="images/3020addendpoint.png?raw=true" alt="3020AddEndpoint" title="AddEndpoint">
+</p></li>
+<li><p>In the <strong>&quot;ADD ENDPOINT&quot;</strong> wizard, on the <strong>&quot;Add an endpoint to a virtual machine&quot;</strong> page, select <strong>&quot;ADD A STAND-ALONE ENDPOINT&quot;</strong> and click the next (arrow) button.  </p>
+
+<p><img src="images/3030standaloneendpoint.png?raw=true" alt="3030StandaloneEndpoint" title="Standalone Endpoint">
+</p>
+<blockquote>
+<p><strong>Note:</strong> Event though we selected <strong>ADD A STAND-ALONE ENDPOINT&quot;</strong>, we will actually be making it a load balanced endoint by selecting that option on the next page.  </p>
+</blockquote></li>
+<li><p>On the <strong>&quot;Specify the details of the endpoint&quot;</strong> page, select <strong>&quot;HTTP&quot;</strong> from the <strong>&quot;NAME&quot;</strong> drop-down list, and <strong>turn on</strong> the <strong>&quot;CREATE A LOAD-BALANCED SET&quot;</strong> checkbox.  Ensure that your setting match the following diagram and click the next (right arrow) button:</p>
+
+<p><img src="images/3040httpendpoint.png?raw=true" alt="3040HTTPEndpoint" title="HTTP Endpoint">
+</p></li>
+<li><p>On the <strong>&quot;Configure the load-balanced set&quot;</strong> page, enter <strong>&quot;webport&quot;</strong> for the <strong>&quot;LOAD-BALANCED SET NAME&quot;</strong>.  Ensure that your settings match the following diagram and click the finish (check mark) button to complete the wizard:</p>
+
+<p><img src="images/3050loadbalancedset.png?raw=true" alt="3050LoadBalancedSet" title="Load Balanced Set">
+</p></li>
+<li><p>Wait until the operation completes, and the new load-balanced endpoint is created:</p>
+
+<p><img src="images/3060endpointcreated.png?raw=true" alt="3060EndpointCreated" title="Endpoint Created">
+</p></li>
+<li><p>Switch the the <strong>&quot;iisvm2&quot;</strong> <strong>&quot;ENDPOINTS&quot;</strong> page, and again, click the <strong>&quot;ADD&quot;</strong> button along the bottom:</p>
+
+<p><img src="images/3070addiisvm2endpoint.png?raw=true" alt="3070AddIisvm2Endpoint" title="Add IISVM2 Endpoint">
+</p></li>
+<li><p>In the <strong>&quot;ADD ENDPOINT&quot;</strong> wizard, on the <strong>&quot;Add an endpoint to the virtual machine&quot;</strong> page, select <strong>&quot;ADD AN ENDPOINT TO AN EXISTING LOAD-BALANCED SET&quot;</strong>, and choose the <strong>&quot;webport&quot;</strong> endpoint we just created from the drop-down list.  Click the next (right arrow) button to continue:</p>
+
+<p><img src="images/3080addlbendpoint.png?raw=true" alt="3080AddLbEndpoint" title="Add Load Balanced Endpoint">
+</p></li>
+<li><p>On the <strong>&quot;Specify the details of the endpoint&quot;</strong> page, enter <strong>&quot;webport&quot;</strong> for the <strong>&quot;NAME&quot;</strong>.  Ensure your settings match the following diagram and click the finish (check mark) button to complete the wizard:</p>
+
+<p><img src="images/3090completelbendpoint.png?raw=true" alt="3090CompleteLBEndpoint" title="Complete Load Balanced Endpoint">
+</p></li>
+<li><p>Again, wait for the new endpoint to be created.  At this point we have configured a load balanced endpoint for port 80 in our cloud service that will be used to load-balance web traffic across our <strong><em>iisvm1</em></strong> and <strong><em>iisvm2</em></strong> nodes. </p></li>
+</ol>
+
+<p><a name="Ex3T2"></a></p>
+
+<h4 id="Task_2_-_Configure_both_Web_Server_VMs_with_the_Web_Server_Role_and_ASPNET_40">Task 2 - Configure both Web Server VMs with the Web Server Role and ASP.NET 4.0</h4>
+
+<h5 id="You_will_complete_the_following_steps_for_both_strongemiisvm1emstrong_and_strongemiisvm2emstrong__The_steps_are_identical_for_each_server">You will complete the following steps for both <strong><em>iisvm1</em></strong> and <strong><em>iisvm2</em></strong>.  The steps are identical for each server.</h5>
+
+<ol>
+<li><p>Select the virtual machine (<strong><em>iisvm1</em></strong> or <strong><em>iisvm2</em></strong>) you are configuring in the Windows Azure Management portal, and click the <strong>&quot;CONNECT&quot;</strong> button along the bottom to connect.  Follow the prompts, and connect using the credentials (<strong>CloudShop/Azure$123</strong>) you specified when you created the VM. If you need a reminder on how to connect review the steps used to connect to <strong><em>sqlvm1</em></strong> in <a href="#Ex2">Exercise 2</a>, Task 1. </p>
+
+<p><img src="images/3100connecttovm.png?raw=true" alt="3100ConnectToVm" title="Connect to the VM">
+</p></li>
+<li><p>Open the <strong>&quot;Server Manager&quot;</strong> (again, remember you can use the shortcut on the task bar).  And just as we did with <strong>sqlvm1</strong>, we'll start by turning off the <strong>&quot;IE Enanced Security Configuration&quot;</strong> for the administrator account.  </p></li>
+<li><p>On the <strong>&quot;Server Manager (IISVMx)&quot;</strong> page, click the <strong>&quot;Configure IE ESC&quot;</strong> link, then on the <strong>&quot;Internet Explorer Enhanced Security Configuration&quot;</strong> window, under the <strong>&quot;Administrators:&quot;</strong> heading, select <strong>&quot;Off&quot;</strong> then click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/3110turnoffieesc.png?raw=true" alt="3110TurnOffIEESC" title="Turn Off IE ESC">
+</p></li>
+<li><p>Next, switch to the <strong>&quot;Roles&quot;</strong> page, and click the <strong>&quot;Add Roles&quot;</strong> link:</p>
+
+<p><img src="images/3120addroles.png?raw=true" alt="3120AddRoles" title="Add Roles">
+</p></li>
+<li><p>In the <strong>&quot;Add Roles Wizard&quot;</strong>, on the <strong>&quot;Before You Begin&quot;</strong> page, click <strong>&quot;Next&quot;</strong>:</p>
+
+<p><img src="images/3130beforeyoubegin.png?raw=true" alt="3130BeforeYouBegin" title="Before You Begin">
+</p></li>
+<li><p><strong>Turn On</strong> the <strong>&quot;Application Server&quot;</strong> Checkbox, and when prompted, click the <strong>&quot;Add Required Features&quot;</strong> button:</p>
+
+<p><img src="images/3140applicationserver.png?raw=true" alt="3140ApplicationServer" title="Application Server">
+</p></li>
+<li><p>Then Select the <strong>&quot;Web Server (IIS)&quot;</strong> option, and click <strong>&quot;Next&quot;</strong></p>
+
+<p><img src="images/3150webserveriis.png?raw=true &quot;Web Server (IIS" alt="3150WebServerIIS">
+&quot;)</p></li>
+<li><p>On the <strong>&quot;Application Server&quot;</strong> page, click <strong>&quot;Next&quot;</strong>:</p>
+
+<p><img src="images/3160applicationserverintro.png?raw=true" alt="3160ApplicationServerIntro" title="Application Server Intro">
+</p></li>
+<li><p>On the <strong>&quot;Select Role Services&quot;</strong> Page, <strong>turn on</strong> the <strong>&quot;Web Server (IIS) Support&quot;</strong> checkbox, and when prompted click the <strong>&quot;Add Required Role Services&quot;</strong> button.  Then click <strong>&quot;Next&quot;</strong> to continue:</p>
+
+<p><img src="images/3170roleservices.png?raw=true" alt="3170RoleServices" title="Role Services">
+</p></li>
+<li><p>On the <strong>&quot;Web Server (IIS)&quot;</strong> Page, click <strong>&quot;Next&quot;</strong> to continue:</p>
+
+<p><img src="images/3180webserveriisintro.png?raw=true" alt="3180WebServerIISIntro" title="Web Server IIS Intro">
+</p></li>
+<li><p>On the <strong>&quot;Select Role Services&quot; page, leave the default selections, and click **&quot;Next&quot;</strong> to continue:</p>
+
+<p><img src="images/3190webserverroleservices.png?raw=true" alt="3190WebServerRoleServices" title="Web Server Role Services">
+</p></li>
+<li><p>On the <strong>&quot;Confirmation&quot;</strong> page, click <strong>&quot;Install&quot;</strong> and wait while the services install (3-5 minutes):</p>
+
+<p><img src="images/3200confirmation.png?raw=true" alt="3200Confirmation" title="Confirmation">
+</p></li>
+<li><p>On the <strong>&quot;Installation Results&quot;</strong> page, click <strong>&quot;Close&quot;</strong>, and then close <strong>&quot;Server Manager&quot;</strong>:</p>
+
+<p><img src="images/3210installationresults.png?raw=true" alt="3210InstallationResults" title="Installation Results">
+</p></li>
+<li><p>The Windows Server image we used already had the .NET 4.0 framework installed, however, because we added IIS AFTER it the .NET Framework was installed, we need to register the latest version of ASP.NET with IIS.</p></li>
+<li><p>On the web server virtual machine, open a command prompt.  and change to the <strong>&quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319&quot;</strong> directory.  Then run <strong>&quot;aspnet_regiis.exe -i&quot;</strong>.</p>
+
+<p><img src="images/3220runaspnetregiis.png?raw=true" alt="3220RunASPNetRegIIS" title="Run aspnet_regiis">
+</p></li>
+<li><p>Close the command prompt window when you are done. </p></li>
+<li><p>Make sure you have completed the steps in this task for both <strong><em>iisvm1</em></strong> and <strong><em>iisvm2</em></strong> before continuing.</p></li>
+</ol>
+
+<p><a name="Ex3T3"></a></p>
+
+<h4 id="Task_3_-_Upload_the_CloudShop_website_and_configure_it_in_IIS_on_both_Web_Server_VMs">Task 3 - Upload the CloudShop website and configure it in IIS on both Web Server VMs</h4>
+
+<h5 id="You_will_complete_the_following_steps_for_both_strongemiisvm1emstrong_and_strongemiisvm2emstrong__The_steps_are_identical_for_each_server">You will complete the following steps for both <strong><em>iisvm1</em></strong> and <strong><em>iisvm2</em></strong>.  The steps are identical for each server.</h5>
+
+<ol>
+<li><p>On your local machine locate the CloudShop.zip file in the lab's <strong>&quot;Source\Assets\CloudShop&quot;</strong> folder.  Right-click on the local file and select <strong>&quot;Copy&quot;</strong> from the pop-up menu.</p>
+
+<p><img src="images/3230copycloudshopzip.png?raw=true" alt="3230CopyCloudShopZip" title="Copy CloudShop.zip">
+</p></li>
+<li><p>In the remote desktop connection window for your web server virtual machine (<strong><em>iismv1</em></strong> or <strong><em>iisvm2</em></strong>), right-click on the desktop and select <strong>&quot;Paste&quot;</strong> from the pop-up menu.  This will copy the CloudShop.zip source file into the VM.  </p>
+
+<p><img src="images/3240pastecloudshopzip.png?raw=true" alt="3240PasteCloudShopZip" title="Paste CloudShop.zip">
+</p></li>
+<li><p>Right-click on the CloudShop.zip file in the target VM, and select <strong>&quot;Extract All...&quot;</strong> from the pop-up menu, then and extract the files to the <strong>&quot;C:\inetpub\wwwroot\CloudShop&quot;</strong> folder.  You will need to type the path in because the folder doesn't currently exist.  </p>
+
+<p><img src="images/3250extractcloudshopzip.png?raw=true" alt="3250ExtractCloudShopZip" title="Extract CloudShop.zip">
+</p></li>
+<li><p>When the extraction is complete, the <strong>&quot;C:\inetpub\wwwroot\CloudShop&quot;</strong> folder should be opened, verify that the files extracted successfully, then close the <strong>&quot;C:\inetpub\wwwroot\CloudShop&quot;</strong> folder.</p></li>
+<li><p>From the web server VM's start menu, select <strong>&quot;All Programs&quot;</strong> | <strong>&quot;Administrative Tools&quot;</strong> | <strong>&quot;Internet Information Services (IIS) Manager&quot;</strong></p></li>
+<li><p>In the <strong>&quot;Internet Information Services (IIS) Manager&quot;</strong> window, expand <strong>&quot;IISVMx&quot;</strong> | <strong>&quot;Sites&quot;</strong> | <strong>&quot;Default Web Site&quot;</strong>. then right click on the <strong>&quot;CloudShop&quot;</strong> folder and select <strong>&quot;Convert to Application&quot;</strong>:</p>
+
+<p><img src="images/3260cloudshopapplication.png?raw=true" alt="3260CloudShopApplication" title="Create CloudShop Application">
+</p></li>
+<li><p>In the <strong>&quot;Add Application&quot;</strong> window, accept the defaults and click <strong>&quot;OK&quot;</strong>:</p>
+
+<p><img src="images/3270addapplicationwindow.png?raw=true" alt="3270AddApplicationWindow" title="Add Application Window">
+</p></li>
+<li><p>Next we need to edit the wb.config to point the website to the <strong><em>sqlvm1</em></strong> server that has the AdventureWorks2012 database on it.  With the <strong>&quot;CloudShop&quot;</strong> application selected in IIS Manager, double click on the <strong>&quot;Connection Strings&quot;</strong> icon to edit the connection strings in the web.config file:</p>
+
+<p><img src="images/3280editconnectionstrings.png?raw=true" alt="3280EditConnectionStrings" title="Edit the Connection Strings">
+</p></li>
+<li><p>Edit <strong>both</strong> the <strong>&quot;AdventureWorksEntities&quot;</strong> and <strong>&quot;DefaultConnection&quot;</strong> connection strings.  Replace the <strong>&quot;[ENTER YOUR SQL SERVER NAME]&quot;</strong> placeholders (including the square brackets) with <strong><em>sqlvm1</em></strong>  (or the name you gave to your SQL VM if you used something different).  Click <strong>&quot;OK&quot;</strong> When you are done.</p>
+
+<p><img src="images/3290entersqlvm1name.png?raw=true" alt="3290EnterSQLVM1Name" title="Enter SQLVM1 Server Name">
+</p></li>
+<li><p>Close the *<em>&quot;Internet Information Services (IIS) Manager</em>&quot;&quot; window when you are done. </p></li>
+<li><p>You can test the website on the VM itself by opening IE on the web server VM and navigating to http://localhost/CloudShop.  It should load successfully.  Close the browser when you are done.</p>
+
+<p><img src="images/3300testingcloudshoponwebvm.png?raw=true" alt="3300TestingCloudShopOnWebVM" title="TestingCloudShoponWebVM">
+</p>
+<blockquote>
+<p><strong>Note:</strong> This test is testing directly from the Web Server VM itself, and is not going through the load balanced endpoint we created earlier.  You should see the server name (IISVMx) show up next to the word &quot;Products&quot; in the header.  Since you aren't going through the load balancer, it will always show the name of the local server. We will test from an external browswer in the next task.  </p>
+</blockquote></li>
+<li><p>Make sure to complete the steps in this task for both <strong>iisvm1</strong> and <strong>iisvm2</strong> before continuing.</p></li>
+</ol>
+
+<p><a name="Ex3T4"></a></p>
+
+<h4 id="Task_4_-_Test_the_Web_Site">Task 4 - Test the Web Site</h4>
+
+<ol>
+<li><p>Back on your personal workstation, login to the Windows Azure Management Portal (<a href="https://manage.windowsazure.com">https://manage.windowsazure.com</a>), and navigate to the <strong>&quot;Cloud Services&quot;</strong> page. </p></li>
+<li><p><strong>Right-Click</strong> the the link in the <strong>&quot;URL&quot;</strong> column for the cloud service you created earlier in Exercise 1, and select <strong>&quot;Copy shortcut&quot;</strong> from the pop-up menu: </p>
+
+<p><img src="images/3310copycloudserviceurl.png?raw=true" alt="3310CopyCloudServiceURL" title="Copy the Cloud Service URL">
+</p></li>
+<li><p>In a new browser window or tab, pase in the URL and add the <strong>&quot;CloudShop&quot;</strong> application name to the end of it (e.g. http://<your cloud="" service="" name="">.cloudapp.net/CloudShop or <a href="http://cloudshopdemo.cloudapp.net/CloudShop">http://cloudshopdemo.cloudapp.net/CloudShop</a>) and navigate to the URL. Verify that the site loads, and note the name of the server that shows up in the header: <p>
+
+<p><img src="images/3320cloudshoptest.png?raw=true" alt="3320CloudShopTest" title="Testing Cloud Shop">
+</p></your></li>
+<li><p>Try refreshing the browser (you may need to do it multiple times) until the other web server name shows up in the header:</p>
+
+<p><img src="images/3330verifyloadbalancing.png?raw=true" alt="3330VerifyLoadBalancing" title="Verify Load Balancing">
+</p></li>
+<li><p>Finally, try entering a search term  and clicking on the <strong>&quot;Search&quot;</strong> link to verify that the full-text catalog is being searched correctly:</p>
+
+<p><img src="images/3340verifyfulltextsearch.png?raw=true" alt="3340VerifyFullTextSearch" title="Verify Full Text Search">
+</p></li>
+</ol>
+
+<p><a name="Summary"></a></p>
+
+<h3 id="Summary">Summary</h3>
+
+<p>Congratulations!  In this lab you configured a Cloud Service with two Web Server VMs and one SQL Server VM.  You configured the SQL VM to host a database, and allow connections from the Web Server, and you uploaded and configured an MVC4 website onto the Web Servers. </p>
+
+</div>
+</body>
+</html>
