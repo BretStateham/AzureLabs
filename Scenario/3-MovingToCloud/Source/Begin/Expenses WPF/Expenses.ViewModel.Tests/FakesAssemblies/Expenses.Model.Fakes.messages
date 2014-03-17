@@ -1,0 +1,16 @@
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate stub for Expenses.Model.CategoryType: type is a value type.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate stub for Expenses.Model.OtherCategoryType: type is a value type.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate stub for Expenses.Model.ExpenseReportStatus: type is a value type.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate stub for Expenses.Model.ExpenseItemType: type is a value type.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate stub for Expenses.Model.ApprovalActionType: type is a value type.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate stub for Expenses.Model.ItemType: type is a value type.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate stub for Expenses.Model.SortType: type is a value type.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate shim for Expenses.Model.IViewService: type is an interface.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate shim for Expenses.Model.CategoryType: type is an enum.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate shim for Expenses.Model.OtherCategoryType: type is an enum.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate shim for Expenses.Model.ExpenseReportStatus: type is an enum.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate shim for Expenses.Model.ExpenseItemType: type is an enum.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate shim for Expenses.Model.ApprovalActionType: type is an enum.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate shim for Expenses.Model.ItemType: type is an enum.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate shim for Expenses.Model.SortType: type is an enum.
+C:\Labs\2 What is a Services Architecture\Source\End\Expenses WPF\Expenses.ViewModel.Tests\Fakes\Expenses.Model.fakes : warning : Cannot generate shim for Expenses.Model.IExpenseRepository: type is an interface.

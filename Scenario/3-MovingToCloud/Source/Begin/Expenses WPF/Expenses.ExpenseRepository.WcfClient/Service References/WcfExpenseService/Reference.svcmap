@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bfd0df2e-4c84-4323-b9bd-10e37d070ae6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8649/ExpenseService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ExpenseService3.xsd" MetadataType="Schema" ID="0e1c1e92-f487-4193-87bd-f15bd8e83776" SourceId="1" SourceUrl="http://localhost:8649/ExpenseService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ExpenseService31.xsd" MetadataType="Schema" ID="16006a7b-0d07-4ad3-8ec0-861a0026e865" SourceId="1" SourceUrl="http://localhost:8649/ExpenseService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ExpenseService1.disco" MetadataType="Disco" ID="e0ccc171-a035-4c5f-b2e3-e1dc5e30a17b" SourceId="1" SourceUrl="http://localhost:8649/ExpenseService.svc?disco" />
+    <MetadataFile FileName="ExpenseService1.wsdl" MetadataType="Wsdl" ID="bbee5540-aa64-4efd-8c68-f423cbd59cc0" SourceId="1" SourceUrl="http://localhost:8649/ExpenseService.svc?wsdl" />
+    <MetadataFile FileName="ExpenseService32.xsd" MetadataType="Schema" ID="ae8d6a3d-f367-4a09-996b-b9638168f81a" SourceId="1" SourceUrl="http://localhost:8649/ExpenseService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
