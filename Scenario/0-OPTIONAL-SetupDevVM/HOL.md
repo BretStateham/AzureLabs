@@ -42,6 +42,7 @@ This hands-on lab includes the following exercises:
 - [Exercise 3: Installing SQL Server 2012 Express](#Exercise3)
 - [Exercise 4: Installing the Windows Azure SDK and Tools](#Exercise4)
 - [Exercise 5: Creating Shortcuts for Common Tools](#Exercise5)
+- [Exercise 6: How to Stop or Delete your VM](#Exercise6)
 
 ---
 
@@ -77,13 +78,16 @@ Exercise 1
 
 1. **Supply values** for the following, then **click the next (right arrow) button to continue**: 
 
+	- **Version Release Date:** Pick the latest date available
 	- **Virtual Machine Name:**  This will be the Windows computer name
 	- **Size:** A **"Medium (2 cores, 3.5GB memory)"** virtual machine should be powerful enough for these labs.  You can choose a smaller size (to save cores or cost) or a larger size (for better performance) as desired.
-	- **Administrator User Name and Password:** Make a note of the admin credentials if needed.  You will need to remember these creditentials to log into the Virtual Machine later.
+	- **Built-In Administrator User Name and Password:** Make a note of the admin credentials if needed.  You will need to remember these creditentials to log into the Virtual Machine later.
 
 	![Virtual Machine Configuration](images/04virtual-machine-configuration.png?raw=true "Virtual Machine Configuration")
 
 	_Virtual Machine Configuration_
+
+	> **Note:** The user name and password set the credentials for the Windows Built-In Administrator account.  
 
 1. **Supply values as follows** for the new Cloud Service, and **click the next (right arrow) button to continue**:
 
@@ -97,11 +101,13 @@ Exercise 1
 
 	_Cloud Service Configuration_
 
-1. **Leave the Endpoints at the default** (Remote Desktop & PowerShell), **Click the ok (checkmark) button to complete the wizard**:
+1. **Leave the Endpoints at the default** (Remote Desktop & PowerShell) and **allow the VM agent to be installed**, **Click the ok (checkmark) button to complete the wizard**:
 
 	![Endpoints Configuration](images/06endpoints-configuration.png?raw=true "Endpoints Configuration")
 
 	_Endpoint Configuration_
+
+	> **Note:** Note that the **"Install the VM Agent"** checkbox is checked.  The VM Agent manages the use of "Extensions" on your VMs.  Extensions help by performing tasks in your VM, like setting the background wall paper (BGInfo) and allowing you to reset the built-in Administrator Credentials (VMAccess).  Learn more about the VM Agent, and the extensions here: http://msdn.microsoft.com/en-us/library/dn606311.aspx 
 
 1. **It will take approximately 10 minutes for the new Virtual Machine to be provisioned**.  Now might be a good time to take a quick break if needed.  While the virtual machine is being provisioned, you can monitor it's status on the **"VIRTUAL MACHINES"** page of the [Windows Azure Management Portal](https://manage.windowsazure.com/):
 
@@ -133,7 +139,7 @@ Exercise 1
 
 	_".rdp" File Publisher Verfication_
 
-1. Enter the administrator **User Name and Password** you specified earlier to connect to the Virtual Machine:
+1. Enter the **User Name and Password** you specified for the built-in administrator account earlier to connect to the Virtual Machine:
 
 	![Administrator Credentials](images/12administrator-credentials.png?raw=true "Administrator Credentials")
 
@@ -173,7 +179,126 @@ Exercise 1
 
 	_Turn "Internet Explorer Ehnanced Security Configuration" off_
 
-At this point we have built a Windows Server 2012 R2 Virtual Machine in Windows Azure!  In the next exercise we'll install the Visual Studio 2013 Ultimate Evaluation.
+1. The administrative account we created with the VM is the Built-In administrator account.  If our goal is to use this VM to build Windows 8.1 store apps though, we need to create another account to use as our developer account because the Built-in administrator account can't install or "side-load" store apps. This is due to how **"User Acccount Control"** Or **UAC** is used when running store apps.  In the next steps, we'll create another user account who is also a member of the **"Administrators"** group, but just isn't the special **Built-In Administrator**.  We'll then do all of our future work as this new account.
+
+1. In the **"Server Manager"** window, click **"Dashboard"** along the left, then from the menu in the top right corner, select **"Tools"** | "**Computer Management"**
+
+	![19ComputerManagement](images/19computermanagement.png?raw=true "Computer Management Link")
+
+	_Computer Management Link_
+
+1. In the **"Computer Management"** window, expand **"Computer Management (Local)"** | **"System Tools"** | **"Local Users and Group" | **"Users"**.  **Right-click** on the **"Users"** node, and select **"New User..." from the pop-up menu
+
+	![19NewUser](images/19newuser.png?raw=true "New User")
+
+	_New User_
+	
+1. In the **"New User"** window, give the new user a **user name**, **password**, and set the **password to never expire**, and click **"Create"**:
+
+	![19NewUserDetails](images/19newuserdetails.png?raw=true "New User Details")
+
+	_New User Details_
+
+1. **Right-click** on **the new user account** and select **"Properties" from the pop-up menu:
+
+	![19NewUserProperties](images/19newuserproperties.png?raw=true "New User Properites")
+
+	_New User Properties_
+
+1. In the new user **"Properties"** window, switch to the **"Member Of"** tab, and click the **"Add..."** button
+
+	![19AddGroup](images/19addgroup.png?raw=true "Add Group")
+
+	_Add Group_
+
+1. In the **"Select Groups"** window, under **"Enter the object names to select"** type **Administrators** and click the **OK** button.  This will add the user user to the Built-in Administrators group and give it all the permissions it needs.  
+
+	![19Administrators](images/19administrators.png?raw=true "Administrators")
+
+	_Administrators_
+
+1. Back on the **"Member Of"** tab, confirm that the **"Administrators"** group appears, and click **"OK"** to close the dialog.  
+
+	![19ConfirmAdministrators](images/19confirmadministrators.png?raw=true "Confirm Administrators")
+	
+	_Confirm Administrators_
+
+1. Close the **"Computer Management"** window when you are done.
+
+	![19CloseComputerManagement](images/19closecomputermanagement.png?raw=true "Close Computer Management")
+
+	_Close Computer Management_
+
+1. Finally, the last thing we need in order to develop Windows 8.1 apps on our Windows Server 2012 R2 image, is the **"Desktop Experience"** feature.  This puts the **"Store"** icon on the start screen and enables the features necessary to run Windows 8.1 store apps on our server.  
+
+1. Back in the **"Server Manager"** window, ensure that you are on the **"Dashboard"** and click the **"2 Add roles and features"** link:
+
+	![19AddRolesAndFeatures](images/19addrolesandfeatures.png?raw=true "Add roles and features")
+
+	_Add Roles and Features_
+
+1. In the **"Add Roles and Features Wizard" accept the default values and click **"Next"** for the first four pages (**"Before You Begin"**, **"Installation Type*"", **"Server Selection"**, and **"Server Roles"**):
+
+	![19AcceptFirstFourPageDefaults](images/19acceptfirstfourpagedefaults.png?raw=true "Accept the defaults")
+
+	_Accept the defaults for the first four pages_
+
+1. On the **"Features"** page of the wizard, scroll down, and expand **"User Interfaces and Infrastructure (2 of 3 installed)**.  Then **turn on** the checkbox for **"Desktop Experience"**
+
+	![19DesktopExperience](images/19desktopexperience.png?raw=true "Desktop Experience")
+
+	_Desktop Experience_
+
+1. When prompted, click the **"Add Features"** button to confirm the addition of the **"Ink and Handwriting Services" as well as **"Media Foundation"**:
+
+	![19AddFeatures](images/19addfeatures.png?raw=true "Add Features")
+
+	_Add Features_
+
+1. Click **"Next"** on the **"Features"** page:
+
+	![19FeaturesNext](images/19featuresnext.png?raw=true "Features")
+
+	_Features_
+
+1. On the **"Confirmation"** page, click **"Install"** and wait for the features to install:
+
+	![19Install](images/19install.png?raw=true "Install")
+
+	_Install_
+
+1.  When the installation is complete, on the Results tab, note that a reboot is required before the new features will be available.  Click the **"Close"** button
+
+	![19Results](images/19results.png?raw=true "Results")
+
+	_Results_
+
+1. Close the remote desktop connection window, and return to the **"VIRTUAL MACHINES"** page in the Management Portal.  With your development Virtual Machine selected (click on the row to the right of the VM name), click the **"RESTART"** button along the bottom, and wait until the **"STATUS" reads **"RUNNING"** again.  
+
+	![19RestartVM](images/19restartvm.png?raw=true "Restart VM")
+
+	_Restart the VM_
+
+1.  Once the VM status has returned to **"Running"** repeat the process we used earlier to connect to the VM using Remote Desktop:
+
+	![19ConnectViaRDP](images/19connectviardp.png?raw=true "Connect via RDP")
+
+	_Connect via Remote Desktop_
+
+1. This time however, connect using the credentials of the new user account you just created in the previous steps:
+
+	![19LoginAsDevUser](images/19loginasdevuser.png?raw=true "Login as new development user")
+
+	_Login as the new development user_
+
+1. At this point we have:
+
+	- Built a **Windows Server 2012 R2 Virtual Machine** in Windows Azure
+	- Created an **administrative developer account** that can be used to debug
+	- Enabled the **"Desktop Experience"** so we can develop Windows 8.1 apps
+Windows 8.1 apps.
+
+In the next exercise we'll install the Visual Studio 2013 Ultimate Evaluation.
 
 ---
 
@@ -186,7 +311,7 @@ Exercise 2
 <a name="Exercise2"></a>
 ### Exercise 2: Installing Visual Studio 2013 Ultimate Evaluation ###
 
-In this exercise, we'll install a **evaluation** edition of **Visual Studio 2013 Ultimate** into the new Virtual Machine we just created. It should be noted that if you have an MSDN subscription that provides Visual Studio 2013 Ultimate to you, then you may want to start the download from there rather than using the trial link provided in these steps.  
+In this exercise, we'll install a **evaluation** edition of **Visual Studio 2013 Ultimate** into the new Virtual Machine we just created. ***It should be noted that if you have an MSDN subscription that provides Visual Studio 2013 Ultimate to you, then you may want to start the download from there rather than using the trial link provided in these steps.***  
 
 **The steps in this exercise should all be performed in using a Remote Desktop Connection to the Virtual Machine we created in [Exercise 1](#Exercise1).**
 
@@ -258,7 +383,19 @@ In this exercise, we'll install a **evaluation** edition of **Visual Studio 2013
 
 	_Sign in with your Microsoft Account_
 
-1. Verify that Visual Studio starts correctly, then **close Visual Studio 2013**. 
+1. Once, Visual Studio is running, install any additional updates.  From the Visual Studio menu bar, select **"TOOLS"** | **"Extensions and Updates..."**
+
+	![30ExtensionsAndUpdates](images/30extensionsandupdates.png?raw=true "Extensions and Updates")
+
+	_Extensions and Updates_
+
+1. In the **"Extensions and Updates"** window, expand **"Updates"** | **"Product Updates"** along the left hand side, and install any Visual Studio Updates as necessary. Follow the prompts for each update and install them accordingly.  Once all desired updates have been applied.  You will likely need to close Visual Studio to allow the installation of certain updates:
+
+	![30VSUpdates](images/30vsupdates.png?raw=true "Visual Studio Updates")
+
+	_Visual Studio Product Updates_
+
+1. Finally, if necessary **close Visual Studio 2013**. 
 
 	![Close Visual Studio](images/30close-visual-studio.png?raw=true "Close Visual Studio")
 
@@ -502,6 +639,45 @@ In this last exerise, we'll setup some shortcuts for both Visual Studio and SQL 
 All done!  
 
 ---
+
+<!--  
+========================================
+Exercise 6
+========================================
+-->
+
+<a name="Exercise6"></a>
+### Exercise 6: How to Stop or Delete your VM ###
+
+#### When you are done working with your VM and you don't need it to be running, you need to at least stop it, or if you never want to use it again, delete it####
+
+Remember that while your VM is running it is incurring execution costs.  How much the VM costs depends on the Size you picked when you created the VM.  You can help reduce those costs when you are done working with a VM one of two ways:
+
+- Stop the VM. This stops any execution costs, but you will still be paying for the storage of the Virtual Hard Disks (*.vhd files).
+- Delete the VM and all attached Disks - This gets rid of the VM and all of its attached disks, but it doesn't affect Cloud Service or any other VMs in the Cloud Service
+- Delete the Cloud Service and all its deployments including all VMs (and their VHDs) in the cloud service.  
+
+In this exercise, we'll show you how to stop the VM to prevent execution costs. 
+
+1. With the Development VM selected on the **"VIRTUAL MACHINES" page in the management portal, click the **"SHUT DOWN"** link along the bottom, then click **"YES"** to confirm the release of it's IP addresses and to shut down the machine.  Once the status reads **"Stopped (Deallocated)"** you are no longer being billed execution costs.  Remember however that you are still paying for the storage of the Virtual Hard Drive:
+
+	![68ShutdownVM](images/68shutdownvm.png?raw=true "Shutdown VM")
+
+	_Shutdown VM_
+
+1. The next choice you have is to delete the VM and it's attached disks.  This makes sure that not only are you no longer being charged for the VM execution, but you are also no longer being charged to store it's Virtual Hard Disks.  To do so, again with the VM selected on the management portal's **"VIRTUAL MACHINES"** page, click the **"DELETE"** button along the bottom, then select **"
+
+	![69DeleteVM](images/69deletevm.png?raw=true "Delete VM")
+
+	_Delete the Virtual Machine and Attached Disks_
+
+1. The third choice is to delete the entire Cloud Service, with all Virtual Machines, Web Roles, Worker Roles, VHDs, etc.  This is the most complete way to remove all items associated with a Cloud Service.  To do so, switch to the **"CLOUD SERVICES"** page, and select the cloud service you wish to delete (make sure to pick the right one).  Then click the **"DELETE"** button along the bottom, and select **"Delete the cloud service and its deployments."**:
+
+	![70DeleteCloudService](images/70deletecloudservice.png?raw=true "Delete the Cloud Service")
+
+	_Delete the Cloud Service and all its Deployments_
+
+
 
 <!--  
 ========================================
