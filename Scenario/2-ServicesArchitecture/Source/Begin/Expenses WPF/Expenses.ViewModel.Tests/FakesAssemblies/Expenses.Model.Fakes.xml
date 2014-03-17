@@ -1,0 +1,812 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Expenses.Model.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Expenses.Model.Fakes.ShimCharge">
+            <summary>Shim type of Expenses.Model.Charge</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimCharge.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimCharge.#ctor(Expenses.Model.Charge)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimCharge.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimCharge.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AccountNumberGet">
+            <summary>Sets the shim of Charge.get_AccountNumber()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AccountNumberSetInt32">
+            <summary>Sets the shim of Charge.set_AccountNumber(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.BilledAmountGet">
+            <summary>Sets the shim of Charge.get_BilledAmount()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.BilledAmountSetDecimal">
+            <summary>Sets the shim of Charge.set_BilledAmount(Decimal value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.CategoryGet">
+            <summary>Sets the shim of Charge.get_Category()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.CategorySetInt32">
+            <summary>Sets the shim of Charge.set_Category(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.ChargeIdGet">
+            <summary>Sets the shim of Charge.get_ChargeId()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.ChargeIdSetInt32">
+            <summary>Sets the shim of Charge.set_ChargeId(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.Constructor">
+            <summary>Sets the shim of Charge.Charge()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.DescriptionGet">
+            <summary>Sets the shim of Charge.get_Description()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.DescriptionSetString">
+            <summary>Sets the shim of Charge.set_Description(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.EmployeeIdGet">
+            <summary>Sets the shim of Charge.get_EmployeeId()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.EmployeeIdSetInt32">
+            <summary>Sets the shim of Charge.set_EmployeeId(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.ExpenseDateGet">
+            <summary>Sets the shim of Charge.get_ExpenseDate()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.ExpenseDateSetDateTime">
+            <summary>Sets the shim of Charge.set_ExpenseDate(DateTime value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.ExpenseReportIdGet">
+            <summary>Sets the shim of Charge.get_ExpenseReportId()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.ExpenseReportIdSetNullableOfInt32">
+            <summary>Sets the shim of Charge.set_ExpenseReportId(Nullable`1&lt;Int32&gt; value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.ExpenseTypeGet">
+            <summary>Sets the shim of Charge.get_ExpenseType()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.ExpenseTypeSetInt32">
+            <summary>Sets the shim of Charge.set_ExpenseType(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.LocationGet">
+            <summary>Sets the shim of Charge.get_Location()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.LocationSetString">
+            <summary>Sets the shim of Charge.set_Location(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.MerchantGet">
+            <summary>Sets the shim of Charge.get_Merchant()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.MerchantSetString">
+            <summary>Sets the shim of Charge.set_Merchant(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.NotesGet">
+            <summary>Sets the shim of Charge.get_Notes()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.NotesSetString">
+            <summary>Sets the shim of Charge.set_Notes(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.ReceiptRequiredGet">
+            <summary>Sets the shim of Charge.get_ReceiptRequired()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.ReceiptRequiredSetBoolean">
+            <summary>Sets the shim of Charge.set_ReceiptRequired(Boolean value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.TransactionAmountGet">
+            <summary>Sets the shim of Charge.get_TransactionAmount()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.TransactionAmountSetDecimal">
+            <summary>Sets the shim of Charge.set_TransactionAmount(Decimal value)</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.ShimCharge.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.AccountNumberGet">
+            <summary>Sets the shim of Charge.get_AccountNumber()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.AccountNumberSetInt32">
+            <summary>Sets the shim of Charge.set_AccountNumber(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.BilledAmountGet">
+            <summary>Sets the shim of Charge.get_BilledAmount()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.BilledAmountSetDecimal">
+            <summary>Sets the shim of Charge.set_BilledAmount(Decimal value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.CategoryGet">
+            <summary>Sets the shim of Charge.get_Category()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.CategorySetInt32">
+            <summary>Sets the shim of Charge.set_Category(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.ChargeIdGet">
+            <summary>Sets the shim of Charge.get_ChargeId()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.ChargeIdSetInt32">
+            <summary>Sets the shim of Charge.set_ChargeId(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.DescriptionGet">
+            <summary>Sets the shim of Charge.get_Description()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.DescriptionSetString">
+            <summary>Sets the shim of Charge.set_Description(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.EmployeeIdGet">
+            <summary>Sets the shim of Charge.get_EmployeeId()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.EmployeeIdSetInt32">
+            <summary>Sets the shim of Charge.set_EmployeeId(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.ExpenseDateGet">
+            <summary>Sets the shim of Charge.get_ExpenseDate()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.ExpenseDateSetDateTime">
+            <summary>Sets the shim of Charge.set_ExpenseDate(DateTime value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.ExpenseReportIdGet">
+            <summary>Sets the shim of Charge.get_ExpenseReportId()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.ExpenseReportIdSetNullableOfInt32">
+            <summary>Sets the shim of Charge.set_ExpenseReportId(Nullable`1&lt;Int32&gt; value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.ExpenseTypeGet">
+            <summary>Sets the shim of Charge.get_ExpenseType()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.ExpenseTypeSetInt32">
+            <summary>Sets the shim of Charge.set_ExpenseType(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.LocationGet">
+            <summary>Sets the shim of Charge.get_Location()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.LocationSetString">
+            <summary>Sets the shim of Charge.set_Location(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.MerchantGet">
+            <summary>Sets the shim of Charge.get_Merchant()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.MerchantSetString">
+            <summary>Sets the shim of Charge.set_Merchant(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.NotesGet">
+            <summary>Sets the shim of Charge.get_Notes()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.NotesSetString">
+            <summary>Sets the shim of Charge.set_Notes(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.ReceiptRequiredGet">
+            <summary>Sets the shim of Charge.get_ReceiptRequired()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.ReceiptRequiredSetBoolean">
+            <summary>Sets the shim of Charge.set_ReceiptRequired(Boolean value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.TransactionAmountGet">
+            <summary>Sets the shim of Charge.get_TransactionAmount()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimCharge.AllInstances.TransactionAmountSetDecimal">
+            <summary>Sets the shim of Charge.set_TransactionAmount(Decimal value)</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.ShimEmployee">
+            <summary>Shim type of Expenses.Model.Employee</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimEmployee.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimEmployee.#ctor(Expenses.Model.Employee)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimEmployee.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimEmployee.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.AliasGet">
+            <summary>Sets the shim of Employee.get_Alias()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.AliasSetString">
+            <summary>Sets the shim of Employee.set_Alias(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.Constructor">
+            <summary>Sets the shim of Employee.Employee()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.EmployeeIdGet">
+            <summary>Sets the shim of Employee.get_EmployeeId()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.EmployeeIdSetInt32">
+            <summary>Sets the shim of Employee.set_EmployeeId(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.ManagerGet">
+            <summary>Sets the shim of Employee.get_Manager()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.ManagerSetString">
+            <summary>Sets the shim of Employee.set_Manager(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.NameGet">
+            <summary>Sets the shim of Employee.get_Name()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.NameSetString">
+            <summary>Sets the shim of Employee.set_Name(String value)</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.ShimEmployee.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.AllInstances.AliasGet">
+            <summary>Sets the shim of Employee.get_Alias()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.AllInstances.AliasSetString">
+            <summary>Sets the shim of Employee.set_Alias(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.AllInstances.EmployeeIdGet">
+            <summary>Sets the shim of Employee.get_EmployeeId()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.AllInstances.EmployeeIdSetInt32">
+            <summary>Sets the shim of Employee.set_EmployeeId(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.AllInstances.ManagerGet">
+            <summary>Sets the shim of Employee.get_Manager()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.AllInstances.ManagerSetString">
+            <summary>Sets the shim of Employee.set_Manager(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.AllInstances.NameGet">
+            <summary>Sets the shim of Employee.get_Name()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEmployee.AllInstances.NameSetString">
+            <summary>Sets the shim of Employee.set_Name(String value)</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.ShimEventArgs`1">
+            <summary>Shim type of Expenses.Model.EventArgs`1</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimEventArgs`1.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimEventArgs`1.#ctor(Expenses.Model.EventArgs{`0})">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimEventArgs`1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimEventArgs`1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEventArgs`1.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEventArgs`1.ConstructorT0">
+            <summary>Sets the shim of EventArgs`1.EventArgs`1(!0 data)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEventArgs`1.DataGet">
+            <summary>Sets the shim of EventArgs`1.get_Data()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEventArgs`1.DataSetT0">
+            <summary>Sets the shim of EventArgs`1.set_Data(!0 value)</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.ShimEventArgs`1.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEventArgs`1.AllInstances.DataGet">
+            <summary>Sets the shim of EventArgs`1.get_Data()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimEventArgs`1.AllInstances.DataSetT0">
+            <summary>Sets the shim of EventArgs`1.set_Data(!0 value)</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.ShimExpenseReport">
+            <summary>Shim type of Expenses.Model.ExpenseReport</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimExpenseReport.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimExpenseReport.#ctor(Expenses.Model.ExpenseReport)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimExpenseReport.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimExpenseReport.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AmountGet">
+            <summary>Sets the shim of ExpenseReport.get_Amount()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AmountSetDecimal">
+            <summary>Sets the shim of ExpenseReport.set_Amount(Decimal value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.ApproverGet">
+            <summary>Sets the shim of ExpenseReport.get_Approver()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.ApproverSetString">
+            <summary>Sets the shim of ExpenseReport.set_Approver(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.Constructor">
+            <summary>Sets the shim of ExpenseReport.ExpenseReport()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.CostCenterGet">
+            <summary>Sets the shim of ExpenseReport.get_CostCenter()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.CostCenterSetInt32">
+            <summary>Sets the shim of ExpenseReport.set_CostCenter(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.DateResolvedGet">
+            <summary>Sets the shim of ExpenseReport.get_DateResolved()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.DateResolvedSetNullableOfDateTime">
+            <summary>Sets the shim of ExpenseReport.set_DateResolved(Nullable`1&lt;DateTime&gt; value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.DateSavedGet">
+            <summary>Sets the shim of ExpenseReport.get_DateSaved()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.DateSavedSetNullableOfDateTime">
+            <summary>Sets the shim of ExpenseReport.set_DateSaved(Nullable`1&lt;DateTime&gt; value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.DateSubmittedGet">
+            <summary>Sets the shim of ExpenseReport.get_DateSubmitted()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.DateSubmittedSetNullableOfDateTime">
+            <summary>Sets the shim of ExpenseReport.set_DateSubmitted(Nullable`1&lt;DateTime&gt; value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.EmployeeIdGet">
+            <summary>Sets the shim of ExpenseReport.get_EmployeeId()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.EmployeeIdSetInt32">
+            <summary>Sets the shim of ExpenseReport.set_EmployeeId(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.ExpenseReportIdGet">
+            <summary>Sets the shim of ExpenseReport.get_ExpenseReportId()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.ExpenseReportIdSetInt32">
+            <summary>Sets the shim of ExpenseReport.set_ExpenseReportId(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.NotesGet">
+            <summary>Sets the shim of ExpenseReport.get_Notes()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.NotesSetString">
+            <summary>Sets the shim of ExpenseReport.set_Notes(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.OwedToCreditCardGet">
+            <summary>Sets the shim of ExpenseReport.get_OwedToCreditCard()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.OwedToCreditCardSetDecimal">
+            <summary>Sets the shim of ExpenseReport.set_OwedToCreditCard(Decimal value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.OwedToEmployeeGet">
+            <summary>Sets the shim of ExpenseReport.get_OwedToEmployee()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.OwedToEmployeeSetDecimal">
+            <summary>Sets the shim of ExpenseReport.set_OwedToEmployee(Decimal value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.PurposeGet">
+            <summary>Sets the shim of ExpenseReport.get_Purpose()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.PurposeSetString">
+            <summary>Sets the shim of ExpenseReport.set_Purpose(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.StatusGet">
+            <summary>Sets the shim of ExpenseReport.get_Status()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.StatusSetExpenseReportStatus">
+            <summary>Sets the shim of ExpenseReport.set_Status(ExpenseReportStatus value)</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.ShimExpenseReport.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.AmountGet">
+            <summary>Sets the shim of ExpenseReport.get_Amount()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.AmountSetDecimal">
+            <summary>Sets the shim of ExpenseReport.set_Amount(Decimal value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.ApproverGet">
+            <summary>Sets the shim of ExpenseReport.get_Approver()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.ApproverSetString">
+            <summary>Sets the shim of ExpenseReport.set_Approver(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.CostCenterGet">
+            <summary>Sets the shim of ExpenseReport.get_CostCenter()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.CostCenterSetInt32">
+            <summary>Sets the shim of ExpenseReport.set_CostCenter(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.DateResolvedGet">
+            <summary>Sets the shim of ExpenseReport.get_DateResolved()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.DateResolvedSetNullableOfDateTime">
+            <summary>Sets the shim of ExpenseReport.set_DateResolved(Nullable`1&lt;DateTime&gt; value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.DateSavedGet">
+            <summary>Sets the shim of ExpenseReport.get_DateSaved()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.DateSavedSetNullableOfDateTime">
+            <summary>Sets the shim of ExpenseReport.set_DateSaved(Nullable`1&lt;DateTime&gt; value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.DateSubmittedGet">
+            <summary>Sets the shim of ExpenseReport.get_DateSubmitted()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.DateSubmittedSetNullableOfDateTime">
+            <summary>Sets the shim of ExpenseReport.set_DateSubmitted(Nullable`1&lt;DateTime&gt; value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.EmployeeIdGet">
+            <summary>Sets the shim of ExpenseReport.get_EmployeeId()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.EmployeeIdSetInt32">
+            <summary>Sets the shim of ExpenseReport.set_EmployeeId(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.ExpenseReportIdGet">
+            <summary>Sets the shim of ExpenseReport.get_ExpenseReportId()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.ExpenseReportIdSetInt32">
+            <summary>Sets the shim of ExpenseReport.set_ExpenseReportId(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.NotesGet">
+            <summary>Sets the shim of ExpenseReport.get_Notes()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.NotesSetString">
+            <summary>Sets the shim of ExpenseReport.set_Notes(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.OwedToCreditCardGet">
+            <summary>Sets the shim of ExpenseReport.get_OwedToCreditCard()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.OwedToCreditCardSetDecimal">
+            <summary>Sets the shim of ExpenseReport.set_OwedToCreditCard(Decimal value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.OwedToEmployeeGet">
+            <summary>Sets the shim of ExpenseReport.get_OwedToEmployee()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.OwedToEmployeeSetDecimal">
+            <summary>Sets the shim of ExpenseReport.set_OwedToEmployee(Decimal value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.PurposeGet">
+            <summary>Sets the shim of ExpenseReport.get_Purpose()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.PurposeSetString">
+            <summary>Sets the shim of ExpenseReport.set_Purpose(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.StatusGet">
+            <summary>Sets the shim of ExpenseReport.get_Status()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimExpenseReport.AllInstances.StatusSetExpenseReportStatus">
+            <summary>Sets the shim of ExpenseReport.set_Status(ExpenseReportStatus value)</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.ShimSummaryItem">
+            <summary>Shim type of Expenses.Model.SummaryItem</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimSummaryItem.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimSummaryItem.#ctor(Expenses.Model.SummaryItem)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimSummaryItem.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.ShimSummaryItem.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AmountGet">
+            <summary>Sets the shim of SummaryItem.get_Amount()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AmountSetNullableOfDecimal">
+            <summary>Sets the shim of SummaryItem.set_Amount(Nullable`1&lt;Decimal&gt; value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.Constructor">
+            <summary>Sets the shim of SummaryItem.SummaryItem()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.DateGet">
+            <summary>Sets the shim of SummaryItem.get_Date()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.DateSetDateTime">
+            <summary>Sets the shim of SummaryItem.set_Date(DateTime value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.DescriptionGet">
+            <summary>Sets the shim of SummaryItem.get_Description()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.DescriptionSetString">
+            <summary>Sets the shim of SummaryItem.set_Description(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.IdGet">
+            <summary>Sets the shim of SummaryItem.get_Id()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.IdSetInt32">
+            <summary>Sets the shim of SummaryItem.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.ItemTypeGet">
+            <summary>Sets the shim of SummaryItem.get_ItemType()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.ItemTypeSetItemType">
+            <summary>Sets the shim of SummaryItem.set_ItemType(ItemType value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.SubmitterGet">
+            <summary>Sets the shim of SummaryItem.get_Submitter()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.SubmitterSetString">
+            <summary>Sets the shim of SummaryItem.set_Submitter(String value)</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.ShimSummaryItem.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AllInstances.AmountGet">
+            <summary>Sets the shim of SummaryItem.get_Amount()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AllInstances.AmountSetNullableOfDecimal">
+            <summary>Sets the shim of SummaryItem.set_Amount(Nullable`1&lt;Decimal&gt; value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AllInstances.DateGet">
+            <summary>Sets the shim of SummaryItem.get_Date()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AllInstances.DateSetDateTime">
+            <summary>Sets the shim of SummaryItem.set_Date(DateTime value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AllInstances.DescriptionGet">
+            <summary>Sets the shim of SummaryItem.get_Description()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AllInstances.DescriptionSetString">
+            <summary>Sets the shim of SummaryItem.set_Description(String value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AllInstances.IdGet">
+            <summary>Sets the shim of SummaryItem.get_Id()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AllInstances.IdSetInt32">
+            <summary>Sets the shim of SummaryItem.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AllInstances.ItemTypeGet">
+            <summary>Sets the shim of SummaryItem.get_ItemType()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AllInstances.ItemTypeSetItemType">
+            <summary>Sets the shim of SummaryItem.set_ItemType(ItemType value)</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AllInstances.SubmitterGet">
+            <summary>Sets the shim of SummaryItem.get_Submitter()</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.ShimSummaryItem.AllInstances.SubmitterSetString">
+            <summary>Sets the shim of SummaryItem.set_Submitter(String value)</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.StubCharge">
+            <summary>Stub type of Expenses.Model.Charge</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubCharge.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubCharge.InitializeStub">
+            <summary>Initializes a new instance of type StubCharge</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubCharge.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubCharge.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubCharge.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.StubEmployee">
+            <summary>Stub type of Expenses.Model.Employee</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubEmployee.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubEmployee.InitializeStub">
+            <summary>Initializes a new instance of type StubEmployee</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubEmployee.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubEmployee.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubEmployee.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.StubEventArgs`1">
+            <summary>Stub type of Expenses.Model.EventArgs`1</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubEventArgs`1.#ctor(`0)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubEventArgs`1.InitializeStub">
+            <summary>Initializes a new instance of type StubEventArgs</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubEventArgs`1.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubEventArgs`1.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubEventArgs`1.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.StubExpenseReport">
+            <summary>Stub type of Expenses.Model.ExpenseReport</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubExpenseReport.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubExpenseReport.InitializeStub">
+            <summary>Initializes a new instance of type StubExpenseReport</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubExpenseReport.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubExpenseReport.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubExpenseReport.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.StubIExpenseRepository">
+            <summary>Stub type of Expenses.Model.IExpenseRepository</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.#ctor">
+            <summary>Initializes a new instance of type StubIExpenseRepository</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.DeleteChargeAsyncInt32">
+            <summary>Sets the stub of IExpenseRepository.DeleteChargeAsync(Int32 chargeId)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.DeleteExpenseReportAsyncInt32">
+            <summary>Sets the stub of IExpenseRepository.DeleteExpenseReportAsync(Int32 expenseReportId)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#DeleteChargeAsync(System.Int32)">
+            <summary>Sets the stub of IExpenseRepository.DeleteChargeAsync(Int32 chargeId)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#DeleteExpenseReportAsync(System.Int32)">
+            <summary>Sets the stub of IExpenseRepository.DeleteExpenseReportAsync(Int32 expenseReportId)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#GetAmountOwedToCreditCardAsync(System.Int32)">
+            <summary>Sets the stub of IExpenseRepository.GetAmountOwedToCreditCardAsync(Int32 employeeId)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#GetAmountOwedToEmployeeAsync(System.Int32)">
+            <summary>Sets the stub of IExpenseRepository.GetAmountOwedToEmployeeAsync(Int32 employeeId)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#GetChargeAsync(System.Int32)">
+            <summary>Sets the stub of IExpenseRepository.GetChargeAsync(Int32 chargeId)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#GetChargesAsync(System.Int32)">
+            <summary>Sets the stub of IExpenseRepository.GetChargesAsync(Int32 expenseReportId)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#GetEmployeeAsync(System.String)">
+            <summary>Sets the stub of IExpenseRepository.GetEmployeeAsync(String employeeAlias)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#GetExpenseReportAsync(System.Int32)">
+            <summary>Sets the stub of IExpenseRepository.GetExpenseReportAsync(Int32 expenseReportId)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#GetExpenseReportsAsync(System.Int32)">
+            <summary>Sets the stub of IExpenseRepository.GetExpenseReportsAsync(Int32 employeeId)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#GetExpenseReportsByStatusAsync(System.Int32,Expenses.Model.ExpenseReportStatus)">
+            <summary>Sets the stub of IExpenseRepository.GetExpenseReportsByStatusAsync(Int32 employeeId, ExpenseReportStatus status)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#GetExpenseReportsForApprovalAsync(System.String)">
+            <summary>Sets the stub of IExpenseRepository.GetExpenseReportsForApprovalAsync(String employeeAlias)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#GetOutstandingChargesAsync(System.Int32)">
+            <summary>Sets the stub of IExpenseRepository.GetOutstandingChargesAsync(Int32 employeeId)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#GetSummaryItemsAsync(System.Int32)">
+            <summary>Sets the stub of IExpenseRepository.GetSummaryItemsAsync(Int32 employeeId)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#ResetDataAsync">
+            <summary>Sets the stub of IExpenseRepository.ResetDataAsync()</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#SaveChargeAsync(Expenses.Model.Charge)">
+            <summary>Sets the stub of IExpenseRepository.SaveChargeAsync(Charge charge)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#SaveEmployeeAsync(Expenses.Model.Employee)">
+            <summary>Sets the stub of IExpenseRepository.SaveEmployeeAsync(Employee employee)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIExpenseRepository.em::Expenses#Model#IExpenseRepository#SaveExpenseReportAsync(Expenses.Model.ExpenseReport)">
+            <summary>Sets the stub of IExpenseRepository.SaveExpenseReportAsync(ExpenseReport expenseReport)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.GetAmountOwedToCreditCardAsyncInt32">
+            <summary>Sets the stub of IExpenseRepository.GetAmountOwedToCreditCardAsync(Int32 employeeId)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.GetAmountOwedToEmployeeAsyncInt32">
+            <summary>Sets the stub of IExpenseRepository.GetAmountOwedToEmployeeAsync(Int32 employeeId)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.GetChargeAsyncInt32">
+            <summary>Sets the stub of IExpenseRepository.GetChargeAsync(Int32 chargeId)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.GetChargesAsyncInt32">
+            <summary>Sets the stub of IExpenseRepository.GetChargesAsync(Int32 expenseReportId)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.GetEmployeeAsyncString">
+            <summary>Sets the stub of IExpenseRepository.GetEmployeeAsync(String employeeAlias)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.GetExpenseReportAsyncInt32">
+            <summary>Sets the stub of IExpenseRepository.GetExpenseReportAsync(Int32 expenseReportId)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.GetExpenseReportsAsyncInt32">
+            <summary>Sets the stub of IExpenseRepository.GetExpenseReportsAsync(Int32 employeeId)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.GetExpenseReportsByStatusAsyncInt32ExpenseReportStatus">
+            <summary>Sets the stub of IExpenseRepository.GetExpenseReportsByStatusAsync(Int32 employeeId, ExpenseReportStatus status)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.GetExpenseReportsForApprovalAsyncString">
+            <summary>Sets the stub of IExpenseRepository.GetExpenseReportsForApprovalAsync(String employeeAlias)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.GetOutstandingChargesAsyncInt32">
+            <summary>Sets the stub of IExpenseRepository.GetOutstandingChargesAsync(Int32 employeeId)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.GetSummaryItemsAsyncInt32">
+            <summary>Sets the stub of IExpenseRepository.GetSummaryItemsAsync(Int32 employeeId)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.ResetDataAsync">
+            <summary>Sets the stub of IExpenseRepository.ResetDataAsync()</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.SaveChargeAsyncCharge">
+            <summary>Sets the stub of IExpenseRepository.SaveChargeAsync(Charge charge)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.SaveEmployeeAsyncEmployee">
+            <summary>Sets the stub of IExpenseRepository.SaveEmployeeAsync(Employee employee)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIExpenseRepository.SaveExpenseReportAsyncExpenseReport">
+            <summary>Sets the stub of IExpenseRepository.SaveExpenseReportAsync(ExpenseReport expenseReport)</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.StubIViewService">
+            <summary>Stub type of Expenses.Model.IViewService</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIViewService.#ctor">
+            <summary>Initializes a new instance of type StubIViewService</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIViewService.ConfirmAsyncStringString">
+            <summary>Sets the stub of IViewService.ConfirmAsync(String title, String message)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIViewService.ExecuteBusyActionAsyncFuncOfTask">
+            <summary>Sets the stub of IViewService.ExecuteBusyActionAsync(Func`1&lt;Task&gt; func)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIViewService.em::Expenses#Model#IViewService#ConfirmAsync(System.String,System.String)">
+            <summary>Sets the stub of IViewService.ConfirmAsync(String title, String message)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIViewService.em::Expenses#Model#IViewService#ExecuteBusyActionAsync(System.Func{System.Threading.Tasks.Task})">
+            <summary>Sets the stub of IViewService.ExecuteBusyActionAsync(Func`1&lt;Task&gt; func)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIViewService.em::Expenses#Model#IViewService#ShowBusy(System.Boolean)">
+            <summary>Sets the stub of IViewService.ShowBusy(Boolean isBusy)</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubIViewService.em::Expenses#Model#IViewService#ShowError(System.String)">
+            <summary>Sets the stub of IViewService.ShowError(String message)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIViewService.ShowBusyBoolean">
+            <summary>Sets the stub of IViewService.ShowBusy(Boolean isBusy)</summary>
+        </member>
+        <member name="F:Expenses.Model.Fakes.StubIViewService.ShowErrorString">
+            <summary>Sets the stub of IViewService.ShowError(String message)</summary>
+        </member>
+        <member name="T:Expenses.Model.Fakes.StubSummaryItem">
+            <summary>Stub type of Expenses.Model.SummaryItem</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubSummaryItem.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Expenses.Model.Fakes.StubSummaryItem.InitializeStub">
+            <summary>Initializes a new instance of type StubSummaryItem</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubSummaryItem.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubSummaryItem.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Expenses.Model.Fakes.StubSummaryItem.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>
