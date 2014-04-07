@@ -39,8 +39,11 @@ This hands-on lab includes the following exercises:
 1. [Creating the Windows Azure Virtual Machines](#Ex1)
 1. [Configure the SQL Server Virtual Machine and Database](#Ex2)
 1. [Configure the Web Server Virtual Machines and Web Sites](#Ex3)
+1. [Deleting the Cloud Service and Virtual Machines](#Ex4)
 
-Estimated time to complete this lab: **45 minutes**.
+Estimated time to complete this lab: **90 minutes**.
+
+---
 
 <a name="Ex1"></a>
 ### Exercise 1: Creating the Windows Azure Virtual Machines ###
@@ -630,7 +633,45 @@ The following steps will take place back on your development workstation.
 
 	![3340VerifyFullTextSearch](images/3340verifyfulltextsearch.png?raw=true "Verify Full Text Search")
 
+---
+
+<a name="Ex4"></a>
+### Exercise 4: Deleting the Cloud Service and Virtual Machines ###
+
+When you are completely done with the Virtual Machines you created above, you should make sure to remove them from your Azure Subscription.  This will prevent any uage charges on your account.  Of course, you don't want to perform this step until you no longer wish keep the Virtual Machines you created.  
+
+If your desire is to keep the VMs, but not be charged for their compute time, you can simply stop them.  Note, that this you will still incur storage charges for the storing of the Virtual Hard Disks (VHDs) that makeup the disks for the VMs.
+
+#### How to stop a VM, but keep it for future use: ####
+
+1. If you do want to stop a VM, not delete it, you can simply select it in the portal, and then click the "Shutdown" button in the toolbar along the bottom:
+
+	![4010ShutdownVM](images/4010shutdownvm.png?raw=true "Shutdown VM")
+
+1. Once the VM is shutdown, it's status will change to **"Stopped (Deallocated)"**.  Once that happens, you are no longer being charged for the VMs compute services.  Remember though, that the VHDs still exist in storage until you delete the VM and the VHDs, and that you are still being charged for the storage services.  
+
+	![4020StoppedVM](images/4020stoppedvm.png?raw=true "Stopped VM")
+
+
+#### How to delete the cloud service and all deployments: ####
+
+1. If you are truly done with the CloudService and all the VMs, you can easily delete them all and eliminate all charges related to them.  To do so, in the management portal, switch to the **"Cloud Services"** page, and select your Cloud Service in the list right clicking to the right of it's name, then once it is selected click the **"Delete"** button along the bottom, and finally choose **"Delete the cloud service and its deployments"**:
+
+	![4030DeleteCloudService](images/4030deletecloudservice.png?raw=true "Delete Cloud Service")
+
+1. When prompted to confirm the deletion, click **"Yes"**:
+
+	![4040ConfirmDeletion](images/4040confirmdeletion.png?raw=true "Confirm Deletion")
+
+1. Verify that the deletion was successful.  You should no longer see the Cloud Service or any of it's Virtual Machines, or Virtual Hard Drives (Note, the Virtual Hard Drives often take a few minutes before they no longer show in the portal). 
+
+	![4040CloudServiceDeleted](images/4040cloudservicedeleted.png?raw=true "Cloud Service Deleted")
+
+
+---
+
 <a name="Summary"></a>
 ### Summary ###
 
 Congratulations!  In this lab you configured a Cloud Service with two Web Server VMs and one SQL Server VM.  You configured the SQL VM to host a database, and allow connections from the Web Server, and you uploaded and configured an MVC4 website onto the Web Servers. 
+

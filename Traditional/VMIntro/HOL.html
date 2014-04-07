@@ -61,9 +61,12 @@ body{font-family:helvetica, arial, freesans, clean, sans-serif;color:#333;line-h
 <li><a href="#Ex1">Creating the Windows Azure Virtual Machines</a></li>
 <li><a href="#Ex2">Configure the SQL Server Virtual Machine and Database</a></li>
 <li><a href="#Ex3">Configure the Web Server Virtual Machines and Web Sites</a></li>
+<li><a href="#Ex4">Deleting the Cloud Service and Virtual Machines</a></li>
 </ol>
 
-<p>Estimated time to complete this lab: <strong>45 minutes</strong>.</p>
+<p>Estimated time to complete this lab: <strong>90 minutes</strong>.</p>
+
+<hr>
 
 <p><a name="Ex1"></a></p>
 
@@ -704,6 +707,48 @@ The name CloudShopDemo is used as a sample throughout this lab, but you will nee
 <p><img src="images/3340verifyfulltextsearch.png?raw=true" alt="3340VerifyFullTextSearch" title="Verify Full Text Search">
 </p></li>
 </ol>
+
+<hr>
+
+<p><a name="Ex4"></a></p>
+
+<h3 id="Exercise_4_Deleting_the_Cloud_Service_and_Virtual_Machines">Exercise 4: Deleting the Cloud Service and Virtual Machines</h3>
+
+<p>When you are completely done with the Virtual Machines you created above, you should make sure to remove them from your Azure Subscription.  This will prevent any uage charges on your account.  Of course, you don't want to perform this step until you no longer wish keep the Virtual Machines you created.  </p>
+
+<p>If your desire is to keep the VMs, but not be charged for their compute time, you can simply stop them.  Note, that this you will still incur storage charges for the storing of the Virtual Hard Disks (VHDs) that makeup the disks for the VMs.</p>
+
+<h4 id="How_to_stop_a_VM_but_keep_it_for_future_use">How to stop a VM, but keep it for future use:</h4>
+
+<ol>
+<li><p>If you do want to stop a VM, not delete it, you can simply select it in the portal, and then click the &quot;Shutdown&quot; button in the toolbar along the bottom:</p>
+
+<p><img src="images/4010shutdownvm.png?raw=true" alt="4010ShutdownVM" title="Shutdown VM">
+</p></li>
+<li><p>Once the VM is shutdown, it's status will change to <strong>&quot;Stopped (Deallocated)&quot;</strong>.  Once that happens, you are no longer being charged for the VMs compute services.  Remember though, that the VHDs still exist in storage until you delete the VM and the VHDs, and that you are still being charged for the storage services.  </p>
+
+<p><img src="images/4020stoppedvm.png?raw=true" alt="4020StoppedVM" title="Stopped VM">
+</p></li>
+</ol>
+
+<h4 id="How_to_delete_the_cloud_service_and_all_deployments">How to delete the cloud service and all deployments:</h4>
+
+<ol>
+<li><p>If you are truly done with the CloudService and all the VMs, you can easily delete them all and eliminate all charges related to them.  To do so, in the management portal, switch to the <strong>&quot;Cloud Services&quot;</strong> page, and select your Cloud Service in the list right clicking to the right of it's name, then once it is selected click the <strong>&quot;Delete&quot;</strong> button along the bottom, and finally choose <strong>&quot;Delete the cloud service and its deployments&quot;</strong>:</p>
+
+<p><img src="images/4030deletecloudservice.png?raw=true" alt="4030DeleteCloudService" title="Delete Cloud Service">
+</p></li>
+<li><p>When prompted to confirm the deletion, click <strong>&quot;Yes&quot;</strong>:</p>
+
+<p><img src="images/4040confirmdeletion.png?raw=true" alt="4040ConfirmDeletion" title="Confirm Deletion">
+</p></li>
+<li><p>Verify that the deletion was successful.  You should no longer see the Cloud Service or any of it's Virtual Machines, or Virtual Hard Drives (Note, the Virtual Hard Drives often take a few minutes before they no longer show in the portal). </p>
+
+<p><img src="images/4040cloudservicedeleted.png?raw=true" alt="4040CloudServiceDeleted" title="Cloud Service Deleted">
+</p></li>
+</ol>
+
+<hr>
 
 <p><a name="Summary"></a></p>
 
