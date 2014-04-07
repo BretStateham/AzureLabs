@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Markdown Preview</title>
+<title>Introduction to Windows Azure Virtual Machines</title>
 <style>
 body{font-family:helvetica, arial, freesans, clean, sans-serif;color:#333;line-height:1.6;font-size:14px}.markdown-body{line-height:1.6;font-size:14px}.markdown-body > *:first-child{margin-top:0 !important}.markdown-body > *:last-child{margin-bottom:0 !important}.markdown-body a.absent{color:#c00}.markdown-body h1{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:28px;margin:20px 0 10px;padding:0}.markdown-body h2{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:24px;border-bottom-color:#ccc;border-bottom-width:1px;border-bottom-style:solid;margin:20px 0 10px;padding:0}.markdown-body h3{font-weight:700;-webkit-font-smoothing:antialiased;font-size:18px;margin:20px 0 10px;padding:0}.markdown-body h4{font-weight:700;-webkit-font-smoothing:antialiased;font-size:16px;margin:20px 0 10px;padding:0}.markdown-body h5{font-weight:700;-webkit-font-smoothing:antialiased;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body h6{font-weight:700;-webkit-font-smoothing:antialiased;color:#777;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body blockquote{color:#777;border-left-color:#ddd;border-left-width:4px;border-left-style:solid;margin:15px 0;padding:0 15px}.markdown-body dl{margin:15px 0;padding:0}.markdown-body table{border-collapse:collapse;margin:15px 0;padding:0}.markdown-body pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;margin:15px 0;padding:6px 10px}.markdown-body li p.first{display:inline-block}.markdown-body dl dt{font-size:14px;font-style:italic;font-weight:700;margin:15px 0 5px;padding:0}.markdown-body dl dt:first-child{padding:0}.markdown-body dl dd{margin:0 0 15px;padding:0 15px}.markdown-body table tr{border-top-color:#ccc;border-top-width:1px;border-top-style:solid;background-color:#fff;margin:0;padding:0}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%}.markdown-body span.frame{overflow:hidden;display:block}.markdown-body span.frame > span{border:1px solid #ddd;width:auto;overflow:hidden;float:left;display:block;margin:13px 0 0;padding:7px}.markdown-body span.frame span img{float:left;display:block}.markdown-body span.frame span span{color:#333;clear:both;display:block;padding:5px 0 0}.markdown-body span.align-center > span{text-align:center;overflow:hidden;display:block;margin:13px auto 0}.markdown-body span.align-center span img{text-align:center;margin:0 auto}.markdown-body span.align-right > span{text-align:right;overflow:hidden;display:block;margin:13px 0 0}.markdown-body span.align-right span img{text-align:right;margin:0}.markdown-body span.float-left{overflow:hidden;margin-right:13px;float:left;display:block}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{overflow:hidden;margin-left:13px;float:right;display:block}.markdown-body span.float-right > span{text-align:right;overflow:hidden;display:block;margin:13px auto 0}.markdown-body pre > code{border:currentColor;white-space:pre;margin:0;padding:0}.markdown-body .highlight pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;padding:6px 10px}.markdown-body p,.markdown-body li{margin:15px 0}.markdown-body ul,.markdown-body ol{padding-left:30px;margin:15px 0}.markdown-body > h2:first-child,.markdown-body > h1:first-child,.markdown-body > h1:first-child + h2{border:0 currentColor;padding-top:0;margin-top:0}.markdown-body > h3:first-child,.markdown-body > h4:first-child,.markdown-body > h5:first-child,.markdown-body > h6:first-child{padding-top:0;margin-top:0}.markdown-body h1 + p,.markdown-body h2 + p,.markdown-body h3 + p,.markdown-body h4 + p,.markdown-body h5 + p,.markdown-body h6 + p,.markdown-body ul li > :first-child,.markdown-body ol li > :first-child,.markdown-body dl dt > :first-child,.markdown-body dl dd > :first-child,.markdown-body blockquote > :first-child,.markdown-body table tr th > :first-child,.markdown-body table tr td > :first-child{margin-top:0}.markdown-body ul li > :last-child,.markdown-body ol li > :last-child,.markdown-body dl dt > :last-child,.markdown-body dl dd > :last-child,.markdown-body blockquote > :last-child,.markdown-body table tr th > :last-child,.markdown-body table tr td > :last-child{margin-bottom:0}.markdown-body table tr th,.markdown-body table tr td{border:1px solid #ccc;text-align:left;margin:0;padding:6px 13px}.markdown-body span.align-center,.markdown-body span.align-right{overflow:hidden;clear:both;display:block}.markdown-body code,.markdown-body tt{border-radius:3px;border:1px solid #eaeaea;white-space:nowrap;background-color:#f8f8f8;margin:0 2px;padding:0 5px}.markdown-body pre code,.markdown-body pre tt{border:currentColor;background-color:transparent}span.codelanguage{display:none}
 </style>
@@ -106,7 +106,8 @@ body{font-family:helvetica, arial, freesans, clean, sans-serif;color:#333;line-h
 <ul>
 <li>VERSION RELEASE DATE: <strong><em>Choose the latest date</em></strong></li>
 <li>VIRTUAL MACHINE NAME: <strong><em>sqlvm1</em></strong> (Use this name.  using a different name will cause issues later in the lab).</li>
-<li>SIZE: <strong><em>Small (1 core, 1.75 GB memory)</em></strong> (You don't need anything bigger for this lab)</li>
+<li>TIER: <strong><em>Standard</em></strong></li>
+<li>SIZE: <strong><em>A1 (1 core, 1.75 GB memory)</em></strong> (You don't need anything bigger for this lab)</li>
 <li>NEW USER NAME: <strong><em>CloudShop</em></strong></li>
 <li>NEW PASSWORD:  <strong><em>Azure$123</em></strong></li>
 </ul>
@@ -124,6 +125,7 @@ The name CloudShopDemo is used as a sample throughout this lab, but you will nee
 <li>REGION/AFFINITY GROUP/VIRTUAL NETWORK: <strong><em>Pick a region close to you</em></strong></li>
 <li>STORAGE ACCOUNT: <strong><em>Use an automatically generated storage account</em></strong></li>
 <li>AVAILABILITY SET: <strong><em>(None)</em></strong></li>
+<li>ENDPOINTS: <strong><em>Leave the default endpoints.</em></strong></li>
 </ul>
 
 <p><img src="images/1060vmconfig2.png?raw=true" alt="1060VMConfig2" title="Virtual Machine Configuration">
@@ -153,16 +155,16 @@ The name CloudShopDemo is used as a sample throughout this lab, but you will nee
 
 <p><img src="images/1090newvmfromgallery.png?raw=true" alt="1090NewVMFromGallery" title="New VM From Gallery">
 </p></li>
-<li><p>In the <strong>&quot;CREATE A VIRTUAL MACHINE&quot;</strong> wizard, on the <strong>&quot;Choose an Image&quot;</strong> page, select the <strong>&quot;Windows Server 2008 R2 SP1&quot;</strong> image and click the next (arrow) button to continue:</p>
-
-<p><img src="images/1100win2k8vmimage.png?raw=true" alt="1100Win2K8VMImage" title="Windows Server 2008 R2 SP1 Image">
+<li><p>In the <strong>&quot;CREATE A VIRTUAL MACHINE&quot;</strong> wizard, on the <strong>&quot;Choose an Image&quot;</strong> page, select the <strong>&quot;Windows Server 2008 R2 SP1&quot;</strong> image and click the next (arrow) button to continue:
+<img src="images/1100win2k8vmimage.png?raw=true" alt="1100Win2K8VMImage" title="Windows Server 2008 R2 SP1 Image">
 </p></li>
 <li><p>On the first <strong>&quot;Virtual machine configuration&quot;</strong> page:</p>
 
 <ul>
 <li>VERSION RELEASE DATE: <strong><em>Choose the latest date</em></strong></li>
 <li>VIRTUAL MACHINE NAME: <strong><em>iisvm1</em></strong> for the first vm, <strong><em>iisvm2</em></strong> for the second</li>
-<li>SIZE: <strong><em>Small 1 core, 1.75 GB memory)</em></strong></li>
+<li>TIER: <strong><em>Standard</em></strong></li>
+<li>SIZE: <strong><em>A1 (1 core, 1.75 GB memory)</em></strong></li>
 <li>NEW USER NAME: <strong><em>CloudShop</em></strong> (or the same name you used for <strong><em>sqlvm1</em></strong>)</li>
 <li>NEW PASSWORD: <strong><em>Azure$123</em></strong> (or the same password you used for <strong><em>sqlvm1</em></strong>)</li>
 </ul>
@@ -182,12 +184,15 @@ The name CloudShopDemo is used as a sample throughout this lab, but you will nee
 
 <p><img src="images/1130vmconfig3.png?raw=true" alt="1130VMConfig3" title="Virtual Machine Configuration Page 3">
 </p></li>
-<li><p>After creating <strong>iisvm1</strong> (and waiting 1-2 minutes to continue) then repeat the steps above to create <strong>iisvm2</strong></p></li>
+<li><p>After creating <strong>iisvm1</strong> (and waiting 1-2 minutes to continue) then 
+<strong>repeat the steps above to create <em>iisvm2</em></strong></p></li>
 <li><p>Once all three virtual machines have been created, <strong>wait until at least the sqlvm1 status reads &quot;Running&quot;</strong> before proceeding to the next task.  <strong>This could take anywhere from 10-30 minutes</strong>.  Now is a good time to take a break! </p>
 
 <p><img src="images/1140vmsrunning.png?raw=true" alt="1140VMsRunning" title="Virtual Machines Running">
 </p></li>
 </ol>
+
+<hr>
 
 <p><a name="Ex2"></a></p>
 
@@ -214,7 +219,7 @@ The name CloudShopDemo is used as a sample throughout this lab, but you will nee
 <ol>
 <li><p>In the Windows Azure Management Portal, on the &quot;VIRTUAL MACHINES&quot; page, click on the name of the &quot;sqlvm1&quot; virtual machine, then switch to it's DASHBOARD page. Scroll to the bottom to see that there is only a single drive attached to the VM.</p>
 
-<p><img src="images/2012sqlvm1drive.png?raw=true" alt="2012SQLVM1Drive" title="SQLVM1 Drive">
+<p><img src="images/2013sqlvm1drive2.png?raw=true" alt="2013SQLVM1Drive2" title="SQLVM1 Drives">
 </p></li>
 <li><p>Click the <strong>&quot;ATTACH&quot;</strong> button along the bottom, and select <strong>&quot;Attach empty disk&quot;</strong>:</p>
 
@@ -302,7 +307,7 @@ The name CloudShopDemo is used as a sample throughout this lab, but you will nee
 
 <p><img src="images/2170newlyformatteddrives.png?raw=true" alt="2170NewlyFormattedDrives" title="Newly Formatted Drives">
 </p></li>
-<li><p>In the open the new drives in Windows Explorer and create the following folders.  Later, we will configure SQL Server to use these new folders rather than the default folders on the C: Drive:</p>
+<li><p>In the open the new drives in Windows Explorer and <strong><em>create the following folders</em></strong>.  Later, we will configure SQL Server to use these new folders rather than the default folders on the C: Drive:</p>
 
 <ul>
 <li><strong>F:\Data</strong></li>
@@ -337,7 +342,7 @@ The name CloudShopDemo is used as a sample throughout this lab, but you will nee
 
 <p><img src="images/2220startssms.png?raw=true" alt="2220StartSSMS" title="Start SSMS">
 </p></li>
-<li><p>When prompted, connect to the SQLVM1 instance:</p>
+<li><p>When prompted, connect to the <strong>SQLVM1</strong> instance:</p>
 
 <p><img src="images/2230connecttosqlmv1.png?raw=true" alt="2230ConnectToSQLMV1" title="Connect to SQLVM1">
 </p></li>
@@ -439,7 +444,7 @@ The name CloudShopDemo is used as a sample throughout this lab, but you will nee
 
 <p><img src="images/2360cloudshoplogin.png?raw=true" alt="2360CloudShopLogin" title="CloudShop Login">
 </p></li>
-<li><p>Make sure that you clicked <strong>&quot;OK&quot;</strong> above to create the new login, then immediately double click on the new login to re-open the Login properties.  Then, switch to the <strong>&quot;User Mapping&quot;</strong> page:</p>
+<li><p>Make sure that you clicked <strong>&quot;OK&quot;</strong> above to create the new <strong>CloudShop</strong> (<strong>Not</strong> the <strong>SQLVM1\CloudShop</strong> login, those are actually different logins) login, then immediately double click on the new login to re-open the Login properties.  Then, switch to the <strong>&quot;User Mapping&quot;</strong> page:</p>
 
 <ul>
 <li><strong>Turn on</strong> the checkbox next to the <strong>AdventureWorks2012</strong> database</li>
@@ -447,7 +452,7 @@ The name CloudShopDemo is used as a sample throughout this lab, but you will nee
 <li>Click <strong>&quot;OK&quot;</strong></li>
 </ul>
 
-<p><img src="images/2270mapuser.png?raw=true" alt="2370MapUser" title="Map User">
+<p><img src="images/2370mapuser.png?raw=true" alt="2370MapUser" title="Map User">
 </p>
 <blockquote>
 <p><strong>Note:</strong> There is a glitch in SQL Server Management Studio right now where it can't assign database roles to the user until the login exists.  That is why you had to exit the login properties and re-enter it again to map the login to a user account in the database.</p>
@@ -497,6 +502,8 @@ The name CloudShopDemo is used as a sample throughout this lab, but you will nee
 <li><p>You can close <strong>&quot;Sever Manager&quot;</strong> when you are done.</p></li>
 <li><p>You can close the Remote Desktop Connection to SQLVM1 when you are done if you wish, but make sure to just disconnect, don't shut down the SQLVM1 server.  </p></li>
 </ol>
+
+<hr>
 
 <p><a name="Ex3"></a></p>
 
@@ -659,11 +666,11 @@ The name CloudShopDemo is used as a sample throughout this lab, but you will nee
 
 <p><img src="images/3280editconnectionstrings.png?raw=true" alt="3280EditConnectionStrings" title="Edit the Connection Strings">
 </p></li>
-<li><p>Edit <strong>both</strong> the <strong>&quot;AdventureWorksEntities&quot;</strong> and <strong>&quot;DefaultConnection&quot;</strong> connection strings.  Replace the <strong>&quot;[ENTER YOUR SQL SERVER NAME]&quot;</strong> placeholders (including the square brackets) with <strong><em>sqlvm1</em></strong>  (or the name you gave to your SQL VM if you used something different).  Click <strong>&quot;OK&quot;</strong> When you are done.</p>
+<li><p>Edit <strong>both</strong> the <strong>&quot;AdventureWorksEntities&quot;</strong> and <strong>&quot;DefaultConnection&quot;</strong> connection strings (The <strong>&quot;LocalSqlServer&quot;</strong> connection isn't used by the web site).  Replace the <strong>&quot;[ENTER YOUR SQL SERVER NAME]&quot;</strong> placeholders (including the square brackets) with <strong><em>sqlvm1</em></strong>  (or the name you gave to your SQL VM if you used something different).  Click <strong>&quot;OK&quot;</strong> When you are done.</p>
 
 <p><img src="images/3290entersqlvm1name.png?raw=true" alt="3290EnterSQLVM1Name" title="Enter SQLVM1 Server Name">
 </p></li>
-<li><p>Close the *<em>&quot;Internet Information Services (IIS) Manager</em>&quot;&quot; window when you are done. </p></li>
+<li><p>Close the <strong>&quot;Internet Information Services (IIS) Manager&quot;</strong> window when you are done. </p></li>
 <li><p>You can test the website on the VM itself by opening IE on the web server VM and navigating to http://localhost/CloudShop.  It should load successfully.  Close the browser when you are done.</p>
 
 <p><img src="images/3300testingcloudshoponwebvm.png?raw=true" alt="3300TestingCloudShopOnWebVM" title="TestingCloudShoponWebVM">

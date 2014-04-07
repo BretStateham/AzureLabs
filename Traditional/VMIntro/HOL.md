@@ -76,7 +76,8 @@ The highlighted portion of the following diagram shows what you will configure i
 1. On the "Virtual machine configuration" page:
 	- VERSION RELEASE DATE: ***Choose the latest date***
 	- VIRTUAL MACHINE NAME: ***sqlvm1*** (Use this name.  using a different name will cause issues later in the lab).
-	- SIZE: ***Small (1 core, 1.75 GB memory)*** (You don't need anything bigger for this lab)
+	- TIER: ***Standard***
+	- SIZE: ***A1 (1 core, 1.75 GB memory)*** (You don't need anything bigger for this lab)
 	- NEW USER NAME: ***CloudShop***
 	- NEW PASSWORD:  ***Azure$123***
 
@@ -91,12 +92,14 @@ The highlighted portion of the following diagram shows what you will configure i
 	- REGION/AFFINITY GROUP/VIRTUAL NETWORK: ***Pick a region close to you***
 	- STORAGE ACCOUNT: ***Use an automatically generated storage account***
 	- AVAILABILITY SET: ***(None)***
+	- ENDPOINTS: ***Leave the default endpoints.***
 
 	![1060VMConfig2](images/1060vmconfig2.png?raw=true "Virtual Machine Configuration")
 
 1. On the third final **"Virtual machine configuration"** page, accept the default values and click the "Check Mark" button in the lower right corner to complete the wizard.
 
 	![1070VMConfig3](images/1070vmconfig3.png?raw=true "Virtual Machine Configuration Page 3")
+
 
 	> **Note:** The Virtual Machine already has endpoints for Remote Desktop connections as well as for remote PowerShell scripts.  
 
@@ -116,13 +119,13 @@ In this task, you will create BOTH of the Web Server Virtual Machines, **iisvm1*
 	![1090NewVMFromGallery](images/1090newvmfromgallery.png?raw=true "New VM From Gallery")
 
 1. In the **"CREATE A VIRTUAL MACHINE"** wizard, on the **"Choose an Image"** page, select the **"Windows Server 2008 R2 SP1"** image and click the next (arrow) button to continue:
-
 	![1100Win2K8VMImage](images/1100win2k8vmimage.png?raw=true "Windows Server 2008 R2 SP1 Image")
 
 1. On the first **"Virtual machine configuration"** page:
 	- VERSION RELEASE DATE: ***Choose the latest date***
 	- VIRTUAL MACHINE NAME: ***iisvm1*** for the first vm, ***iisvm2*** for the second
-	- SIZE: ***Small 1 core, 1.75 GB memory)***
+	- TIER: ***Standard***
+	- SIZE: ***A1 (1 core, 1.75 GB memory)***
 	- NEW USER NAME: ***CloudShop*** (or the same name you used for ***sqlvm1***)
 	- NEW PASSWORD:	***Azure$123*** (or the same password you used for ***sqlvm1***)
 
@@ -134,15 +137,19 @@ In this task, you will create BOTH of the Web Server Virtual Machines, **iisvm1*
 
 	![1120VMConfig2](images/1120vmconfig2.png?raw=true "Virtual Machine Configuration Page 2")
 
+
 1. On the third and final **"Virtual machine configuration"** page, leave the default values and click the "Check Mark" button in the lower right corner to complete the wizard.  
 
 	![1130VMConfig3](images/1130vmconfig3.png?raw=true "Virtual Machine Configuration Page 3")
 
-1. After creating **iisvm1** (and waiting 1-2 minutes to continue) then repeat the steps above to create **iisvm2**
+1. After creating **iisvm1** (and waiting 1-2 minutes to continue) then 
+**repeat the steps above to create _iisvm2_**
 
 1. Once all three virtual machines have been created, **wait until at least the sqlvm1 status reads "Running"** before proceeding to the next task.  **This could take anywhere from 10-30 minutes**.  Now is a good time to take a break! 
 
 	![1140VMsRunning](images/1140vmsrunning.png?raw=true "Virtual Machines Running")
+
+---
 
 <a name="Ex2"></a>
 ### Exercise 2: Configure the SQL Server Virtual Machine and Database ###
@@ -163,11 +170,12 @@ The highlighted portion of the following diagram shows what you will configure i
 
 1. In the Windows Azure Management Portal, on the "VIRTUAL MACHINES" page, click on the name of the "sqlvm1" virtual machine, then switch to it's DASHBOARD page. Scroll to the bottom to see that there is only a single drive attached to the VM.
 
-	![2012SQLVM1Drive](images/2012sqlvm1drive.png?raw=true "SQLVM1 Drive")
+	![2013SQLVM1Drive2](images/2013sqlvm1drive2.png?raw=true "SQLVM1 Drives")
 
 1. Click the **"ATTACH"** button along the bottom, and select **"Attach empty disk"**:
 
 	![2014AttachEmptyDisk](images/2014attachemptydisk.png?raw=true "Attach Empty Disk")
+
 
 1. In the "Attach an empty disk..." window, you don't need to change anything except the size.  Enter **50** for the **SIZE (GB)**:
 
@@ -251,7 +259,7 @@ The highlighted portion of the following diagram shows what you will configure i
 
 	![2170NewlyFormattedDrives](images/2170newlyformatteddrives.png?raw=true "Newly Formatted Drives")
 
-1. In the open the new drives in Windows Explorer and create the following folders.  Later, we will configure SQL Server to use these new folders rather than the default folders on the C: Drive:
+1. In the open the new drives in Windows Explorer and ***create the following folders***.  Later, we will configure SQL Server to use these new folders rather than the default folders on the C: Drive:
 	
 	- **F:\Data**
 	- **G:\Logs**
@@ -280,7 +288,7 @@ In this task, we'll download the AdventureWorks2012 Database file from CodePlex 
 
 	![2220StartSSMS](images/2220startssms.png?raw=true "Start SSMS")
 
-1. When prompted, connect to the SQLVM1 instance:
+1. When prompted, connect to the **SQLVM1** instance:
 
 	![2230ConnectToSQLMV1](images/2230connecttosqlmv1.png?raw=true "Connect to SQLVM1")
 
@@ -377,13 +385,14 @@ The websites are pre-configured to connect to the SQL Server instance using a SQ
 
 	![2360CloudShopLogin](images/2360cloudshoplogin.png?raw=true "CloudShop Login")
 
-1. Make sure that you clicked **"OK"** above to create the new login, then immediately double click on the new login to re-open the Login properties.  Then, switch to the **"User Mapping"** page:
+1. Make sure that you clicked **"OK"** above to create the new **CloudShop** (**Not** the **SQLVM1\CloudShop** login, those are actually different logins) login, then immediately double click on the new login to re-open the Login properties.  Then, switch to the **"User Mapping"** page:
 
 	- **Turn on** the checkbox next to the **AdventureWorks2012** database
 	- **Turn on** the checkbox next to the **db_owner** role
 	- Click **"OK"**
 
-	![2370MapUser](images/2270mapuser.png?raw=true "Map User")
+
+	![2370MapUser](images/2370mapuser.png?raw=true "Map User")
 
 	> **Note:** There is a glitch in SQL Server Management Studio right now where it can't assign database roles to the user until the login exists.  That is why you had to exit the login properties and re-enter it again to map the login to a user account in the database.
 
@@ -429,6 +438,8 @@ The last step we need to tak on the SQL Server is to open 1433 in the Windows Fi
 1. You can close **"Sever Manager"** when you are done.
 
 1. You can close the Remote Desktop Connection to SQLVM1 when you are done if you wish, but make sure to just disconnect, don't shut down the SQLVM1 server.  
+
+---
 
 <a name="Ex3"></a>
 ### Exercise 3: Configure the Web Server Virtual Machines and Web Sites ###
@@ -584,11 +595,11 @@ The following steps will take place back on your development workstation.
 
 	![3280EditConnectionStrings](images/3280editconnectionstrings.png?raw=true "Edit the Connection Strings")
 
-1. Edit **both** the **"AdventureWorksEntities"** and **"DefaultConnection"** connection strings.  Replace the **"[ENTER YOUR SQL SERVER NAME]"** placeholders (including the square brackets) with ***sqlvm1***  (or the name you gave to your SQL VM if you used something different).  Click **"OK"** When you are done.
+1. Edit **both** the **"AdventureWorksEntities"** and **"DefaultConnection"** connection strings (The **"LocalSqlServer"** connection isn't used by the web site).  Replace the **"[ENTER YOUR SQL SERVER NAME]"** placeholders (including the square brackets) with ***sqlvm1***  (or the name you gave to your SQL VM if you used something different).  Click **"OK"** When you are done.
 
 	![3290EnterSQLVM1Name](images/3290entersqlvm1name.png?raw=true "Enter SQLVM1 Server Name")
 
-1. Close the **"Internet Information Services (IIS) Manager*"" window when you are done. 
+1. Close the **"Internet Information Services (IIS) Manager"** window when you are done. 
 
 1. You can test the website on the VM itself by opening IE on the web server VM and navigating to http://localhost/CloudShop.  It should load successfully.  Close the browser when you are done.
 
