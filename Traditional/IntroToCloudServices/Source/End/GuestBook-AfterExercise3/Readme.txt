@@ -1,0 +1,1 @@
+You need to correct the connection string settings in the CloudService.Cloud.cscfg and CloudService.local.cscfg files to point to your Azure Storage Account.
